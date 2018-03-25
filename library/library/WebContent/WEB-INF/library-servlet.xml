@@ -11,7 +11,7 @@
      
 	<!-- Configure Spring scan package -->
 	<context:component-scan base-package="vn.dntu.library.*" />
-	<mvc:annotation-driven />
+	
 	
 	<!-- Configure Spring scan file view .jsp -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -19,4 +19,8 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	
+	<!-- Configure Spring mapping resources folder -->
+	<mvc:resources mapping="/resources/**" location="/resources/" cache-period="31556926"/>
+	<mvc:annotation-driven />
 </beans>

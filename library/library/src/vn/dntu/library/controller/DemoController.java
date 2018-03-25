@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class DemoController {
 	
-	@RequestMapping(value = "/welcome.do", method = RequestMethod.GET)
-	public String welcome() {
-        return "welcome";
-	}
-	
-	@RequestMapping(value = "/test.do", method = RequestMethod.GET)
-	public String test() {
-        return "views/test";
-	}
+//	@RequestMapping(value = "/welcome.do", method = RequestMethod.GET)
+//	public String welcome() {
+//        return "welcome";
+//	}
+//	
+//	@RequestMapping(value = "/test.do", method = RequestMethod.GET)
+//	public String test() {
+//        return "/footer";
+//	}
 }
