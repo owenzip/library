@@ -5,13 +5,15 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
-<link href="<c:url value='/resources/css/bootstrap.min.css' />" rel="stylesheet">
-<title>Library Management</title>
+    <link href="<c:url value='/resources/css/bootstrap.min.css' />" rel="stylesheet">
+    <title>Library Management</title>
 </head>
 <body>
-	<button id="test" type="button" class="btn btn-danger">Basic</button>
+<button id="main" type="button" class="btn btn-danger">Main</button>
+
 </body>
 <script type="text/javascript" src="<c:url value='/resources/js/bootstrap.min.js' />"></script>
 <script type="text/javascript" src="<c:url value='/resources/js/jquery-3.3.1.min.js' />"></script>
 <script type="text/javascript" src="<c:url value='/resources/js/login.js' />"></script>
 </html>
+
