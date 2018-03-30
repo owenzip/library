@@ -1,7 +1,7 @@
 $(function() {
 	
 	/*Variable*/
-	
+
 	/*Function main*/
 	let setup = function() {
 		func();
@@ -12,6 +12,7 @@ $(function() {
 
 	}
 
-	return setup();
+
+    return setup();
 	
 });

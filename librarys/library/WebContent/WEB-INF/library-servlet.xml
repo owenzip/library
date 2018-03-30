@@ -11,8 +11,7 @@
      
 	<!-- Configure Spring scan package -->
 	<context:component-scan base-package="vn.dntu.library.*" />
-	
-	
+
 	<!-- Configure Spring scan file view .jsp -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
