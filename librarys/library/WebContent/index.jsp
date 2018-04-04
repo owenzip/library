@@ -8,7 +8,6 @@
     .text-inside {
         word-break:break-all
     }
-
 </style>
 <!DOCTYPE html>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
@@ -43,8 +42,8 @@
                                 <label for="pwd">Mật khẩu</label>
                                 <input type="password" class="form-control" id="pwd">
                             </div>
-                            <button style="margin-top: 20px" type="submit" class="btn btn-dark">&nbsp;&nbsp;&nbsp;&nbsp;Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                            <button style="margin-top: 20px;margin-left: 40px" type="submit" class="btn btn-link">Liên hệ với quản trị</button>
+                            <a href="<c:url value="/homepage.do"/>" style="margin-top: 20px" class="btn btn-dark">&nbsp;&nbsp;&nbsp;&nbsp;Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            <a href="<c:url value="/contact.do"/>" style="margin-top: 20px;margin-left: 40px" type="submit" class="btn btn-link">Liên hệ với quản trị</a>
                         </form>
                     </div>
                 </div>
@@ -55,10 +54,6 @@
 <div class="container" style="margin-top: 80px" >
 </div>
 </body>
-<footer>
-    <p style="text-align: center;">Bản quyền thuộc về đội ngũ <kbd>DEVELOPER-14DTH1 2018 trường DNTU</kbd></p>
-</footer>
-<script type="text/javascript" src="<c:url value='/resources/js/bootstrap.min.js' />"></script>
-<script type="text/javascript" src="<c:url value='/resources/js/jquery-3.3.1.min.js' />"></script>
-<script type="text/javascript" src="<c:url value='/resources/js/login.js' />"></script>
+<%--FOOTER--%>
+<jsp:include page="WEB-INF/jsp/footer.jsp"/>
 </html>
