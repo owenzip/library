@@ -45,6 +45,7 @@
     <title>Library Management</title>
 </head>
 <body>
+<%--Test git pull--%>
 <div id="navbar" style="height: 70px;background-color: #24292e;">
     <div class="container">
         <a href="<c:url value="/contact.do"/>" data-toggle="tooltip" data-placement="bottom" title="Quản lý sách">
