@@ -1,14 +1,3 @@
-<style type="text/css">
-    .bg-login {
-        margin-top: 70px;
-        background-image: url("resources/img/bg-login.PNG");
-        background-position: center 100%;
-        background-size: cover;
-    }
-    .text-inside {
-        word-break:break-all
-    }
-</style>
 <!DOCTYPE html>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -16,44 +5,34 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
+    <jsp:include page="WEB-INF/jsp/lib-util.jsp"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="<c:url value='/resources/css/bootstrap.min.css' />" rel="stylesheet">
-    <link href="<c:url value='/resources/css/library-style.css' />" rel="stylesheet">
     <title>Library Management</title>
 </head>
-<body>
-<%--NAVBAR--%>
-<jsp:include page="WEB-INF/jsp/navbar-login.jsp"/>
-<div style="width: 100%;height: 75%" class="bg-login">
-    <div class="container text-inside">
-        <div class="row">
-            <div class="col-md-6">
-            </div>
-            <div class="col-md-6" style="margin-top: 100px">
-                <div class="card" style="width: 400px;margin-top: 20px;margin-left: 5px">
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group">
-                                <h3>Vui lòng đăng nhập !</h3>
-                                <label style="margin-top: 30px">Nhập tài khoản</label>
-                                <input type="text" class="form-control" id="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Mật khẩu</label>
-                                <input type="password" class="form-control" id="pwd">
-                            </div>
-                            <a href="<c:url value="/homepage.do"/>" style="margin-top: 20px" class="btn btn-dark">&nbsp;&nbsp;&nbsp;&nbsp;Đăng nhập&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                            <a href="<c:url value="/contact.do"/>" style="margin-top: 20px;margin-left: 40px" type="submit" class="btn btn-link">Liên hệ với quản trị</a>
-                        </form>
+<body style="background: #54657a">
+<div class="grandParentContaniner">
+    <div class="parentContainer">
+        <h2 style="color: white"><b>PHẦN MỀM QUẢN LÝ THƯ VIỆN</b></h2>
+        <br/>
+        <div  style="margin-left:10px" class="card" style="width: 350px">
+            <div class="card-body">
+                <form>
+                    <p class="h5 text-center py-4">ĐĂNG NHẬP</p>
+                    <label>Tên đăng nhập</label>
+                    <input type="text" class="form-control">
+                    <br>
+                    <label>Mật khẩu</label>
+                    <input type="password" class="form-control">
+                    <div class="text-center" style="margin-top: 20px">
+                        <a href="<c:url value='/homepage.do'/>" class="btn btn-mdb-color">XÁC NHẬN</a>
                     </div>
-                </div>
+                    <div class="text-center">
+                        <a href="<c:url value='/homepage.do'/>" class="btn btn-link">LIÊN HỆ VỚI QUẢN TRỊ</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
-<div class="container" style="margin-top: 80px" >
-</div>
 </body>
-<%--FOOTER--%>
-<jsp:include page="WEB-INF/jsp/footer.jsp"/>
 </html>

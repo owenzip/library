@@ -9,6 +9,9 @@ public class PageController {
     @RequestMapping(value = "/homepage.do",method = RequestMethod.GET)
     public String homePage() { return "homepage"; }
 
-    @RequestMapping(value = "/contact.do",method = RequestMethod.GET)
-    public String contact() { return "contact"; }
+    @RequestMapping(value = "/",method = RequestMethod.GET)
+    public String contact() { return ""; }
+
+    @RequestMapping(value = "/phieumuon.do",method = RequestMethod.GET)
+    public String phieuMuon() { return "phieumuon"; }
 }
