@@ -195,9 +195,7 @@
                         <div class="col-md-12 form-row" style="margin-top: 30px">
                             <div class="col-md-11">
                                 <label>Ghi chú</label>
-                                <textarea class="form-control" rows="3">
-Sách mới hoàn toàn, đầy đủ trang cả bìa
-                                </textarea>
+                                <textarea class="form-control" rows="3">Sách mới hoàn toàn, đầy đủ trang cả bìa</textarea>
                             </div>
                         </div>
                     </div>
@@ -231,8 +229,8 @@ Sách mới hoàn toàn, đầy đủ trang cả bìa
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <label>Oops, Coming soon :(</label>
+                        <div class="card-body text-center">
+                            <h5>Coming soon...</h5>
                         </div>
                     </div>
                 </div>

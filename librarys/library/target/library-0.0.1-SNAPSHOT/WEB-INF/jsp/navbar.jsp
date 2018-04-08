@@ -15,8 +15,12 @@
         <div class="btn-group">
             <a href="<c:url value='/homepage.do'/>" class="btn btn-mdb-color">QUẢN LÝ SÁCH</a>
             <a href="<c:url value='/homepage.do'/>" class="btn btn-mdb-color">QUẢN LÝ ĐỌC GIẢ</a>
+            <a href="<c:url value='/homepage.do'/>" class="btn btn-mdb-color">QUẢN LÝ NHÂN VIÊN</a>
             <a href="<c:url value='/phieumuon.do'/>" class="btn btn-mdb-color">LẬP PHIẾU MƯỢN</a>
+            <a href="<c:url value='/homepage.do'/>" class="btn btn-mdb-color">THƯ VIỆN ONLINE</a>
             <a href="<c:url value='/homepage.do'/>" class="btn btn-mdb-color">XEM THỐNG KÊ</a>
+            <a href="<c:url value='/homepage.do'/>" class="btn btn-mdb-color">LIÊN HỆ</a>
+            <a href="<c:url value='/homepage.do'/>" class="btn btn-mdb-color">TRỢ GIÚP</a>
             <a href="<c:url value='/'/>" class="btn btn-mdb-color">ĐĂNG XUẤT</a>
         </div>
     </form>

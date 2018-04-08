@@ -201,6 +201,99 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
                     </div>
                 </div>
             </div>
+            <%--XEM LỊCH SỬ--%>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header mdb-color">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4 style="color: white; margin-top: 15px"><b>Lịch sử mượn sách</b></h4>
+                                </div>
+                                <div class="col-md-4" style="margin-top: 10px">
+                                    <select class="form-control">
+                                        <option>Xem tất cả ...</option>
+                                        <option>Sách đang yêu cầu</option>
+                                        <option>Sách đang được mượn</option>
+                                        <option>Số lượt mượn</option>
+                                        <option>Sách đã thất lạc</option>
+                                        <option>Sách hỏng</option>
+                                        <option>Sách hết hạn mượn</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <a class="btn btn-mdb-color">&nbsp&nbspXem&nbsp&nbsp</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Tên sách</th>
+                                    <th>Tác giả</th>
+                                    <th>NXB</th>
+                                    <th>Giá</th>
+                                    <th>Số cuốn</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Java cho người mới bắt đầu</td>
+                                    <td>Nhựt Nguyễn</td>
+                                    <td>Công nghệ Đồng Nai</td>
+                                    <td>185.000</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Những cô em gái</td>
+                                    <td>Nguyễn Nhật Ánh</td>
+                                    <td>Trẻ</td>
+                                    <td>78.000</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Thủ thuật UX/UI</td>
+                                    <td>Lead Team</td>
+                                    <td>Tin học</td>
+                                    <td>168.000</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Bàn có 5 chổ ngồi</td>
+                                    <td>Nguyễn Nhật Ánh</td>
+                                    <td>Trẻ</td>
+                                    <td>208.000</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Kỹ năng sống cần có</td>
+                                    <td>Wild lifer</td>
+                                    <td>Wild</td>
+                                    <td>325.000</td>
+                                    <td>2</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <nav style="float: right    ">
+                                <ul class="pagination">
+                                    <li class="page-item disabled"><span class="page-link">Trước</span></li>
+                                    <li class="page-item"><a class="page-link"> 1</a></li>
+                                    <li class="page-item"><a class="page-link">2</a></li>
+                                    <li class="page-item"><a class="page-link">3</a></li>
+                                    <li class="page-item"><a class="page-link">Sau</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <%--XEM THỐNG KÊ--%>
             <div class="row" style="margin-top: 30px">
                 <div class="col-md-12">
