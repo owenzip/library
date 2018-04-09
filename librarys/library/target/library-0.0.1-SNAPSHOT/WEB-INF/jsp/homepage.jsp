@@ -232,10 +232,9 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
                                 <tr>
                                     <th>#</th>
                                     <th>Tên sách</th>
-                                    <th>Tác giả</th>
-                                    <th>NXB</th>
-                                    <th>Giá</th>
-                                    <th>Số cuốn</th>
+                                    <th>Người mượn</th>
+                                    <th>Thủ thư</th>
+                                    <th>Thời gian</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -245,7 +244,6 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
                                     <td>Nhựt Nguyễn</td>
                                     <td>Công nghệ Đồng Nai</td>
                                     <td>185.000</td>
-                                    <td>2</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
@@ -253,7 +251,6 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
                                     <td>Nguyễn Nhật Ánh</td>
                                     <td>Trẻ</td>
                                     <td>78.000</td>
-                                    <td>4</td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
@@ -261,7 +258,6 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
                                     <td>Lead Team</td>
                                     <td>Tin học</td>
                                     <td>168.000</td>
-                                    <td>2</td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
@@ -269,7 +265,6 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
                                     <td>Nguyễn Nhật Ánh</td>
                                     <td>Trẻ</td>
                                     <td>208.000</td>
-                                    <td>2</td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
@@ -277,7 +272,6 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
                                     <td>Wild lifer</td>
                                     <td>Wild</td>
                                     <td>325.000</td>
-                                    <td>2</td>
                                 </tr>
                                 </tbody>
                             </table>

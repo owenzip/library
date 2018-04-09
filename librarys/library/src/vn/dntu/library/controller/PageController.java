@@ -9,9 +9,24 @@ public class PageController {
     @RequestMapping(value = "/homepage.do",method = RequestMethod.GET)
     public String homePage() { return "homepage"; }
 
-    @RequestMapping(value = "/",method = RequestMethod.GET)
-    public String contact() { return ""; }
-
     @RequestMapping(value = "/phieumuon.do",method = RequestMethod.GET)
     public String phieuMuon() { return "phieumuon"; }
+
+    @RequestMapping(value = "/docgia.do",method = RequestMethod.GET)
+    public String docGia() { return "docgia"; }
+
+    @RequestMapping(value = "/nhanvien.do",method = RequestMethod.GET)
+    public String nhanVien() { return "nhanvien"; }
+
+    @RequestMapping(value = "/thuvien.do",method = RequestMethod.GET)
+    public String thuVien() { return "thuvien"; }
+
+    @RequestMapping(value = "/thongke.do",method = RequestMethod.GET)
+    public String thongKe() { return "thongke"; }
+
+    @RequestMapping(value = "/trogiup.do",method = RequestMethod.GET)
+    public String troGiup() { return "trogiup"; }
+
+    @RequestMapping(value = "/",method = RequestMethod.GET)
+    public String loginPage() { return ""; }
 }

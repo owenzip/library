@@ -6,7 +6,7 @@
 <html>
 <head>
     <jsp:include page="lib-util.jsp"/>
-    <title>QUẢN LÝ SÁCH</title>
+    <title>QUẢN LÝ PHIẾU MƯỢN</title>
 </head>
 <body style="background: #f6f6f6">
 <jsp:include page="navbar.jsp"/>
@@ -39,7 +39,7 @@
                 <div class="card-body">
                     <table class="table table-bordered">
                         <thead>
-                        <tr>
+                        <tr class="btn-mdb-color">
                             <th>#</th>
                             <th>Mã phiếu</th>
                             <th>Người lập</th>
@@ -135,21 +135,15 @@
                             <input type="text" class="form-control" value="Nhựt Nguyễn">
                         </div>
                         <div class="col-md-3">
-                            <label>Tên sách</label>
-                            <input type="text" class="form-control" value="Java cho người mới bắt đầu">
-                        </div>
-                        <div class="col-md-3">
-                            <label>Thể loại</label>
-                            <select type="text" class="form-control">
-                                <option>Công nghệ</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-12 form-row" style="margin-top: 30px">
-                        <div class="col-md-3">
                             <label>Người mượn</label>
                             <input type="text" class="form-control" value="Thái Nguyễn">
                         </div>
+                        <div class="col-md-3">
+                            <label>MSSV</label>
+                            <input type="text" class="form-control" value="1406652">
+                        </div>
+                    </div>
+                    <div class="col-md-12 form-row" style="margin-top: 30px">
                         <div class="col-md-2">
                             <label>Khóa</label>
                             <select type="text" class="form-control">
@@ -162,35 +156,63 @@
                                 <option>Công nghệ thông tin</option>
                             </select>
                         </div>
-                        <div class="col-md-2">
-                            <label>Bình chọn</label>
-                            <select type="text" class="form-control">
-                                <option>Khá hay</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-12 form-row" style="margin-top: 30px">
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <label>Ngày mượn</label>
                             <input type="text" class="form-control" value="22/02/2018">
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <label>Ngày trả</label>
                             <input type="text" class="form-control" value="28/02/2018">
                         </div>
+                    </div>
+                    <div class="col-md-12 form-row" style="margin-top: 30px">
+
                         <div class="col-md-2">
                             <label>Thời hạn</label>
                             <input type="text" class="form-control" value="6 ngày">
                         </div>
-                        <div class="col-md-2">
-                            <label>Tình trạng sách</label>
-                            <select type="text" class="form-control">
-                                <option>Tốt</option>
-                            </select>
-                        </div>
                         <div class="col-md-3">
                             <label>Phí mượn</label>
                             <input type="text" class="form-control" value="0 VNĐ">
+                        </div>
+                        <div class="col-md-12 form-row" style="margin-top: 30px">
+                            <div class="col-md-11">
+                                <label>Sách mượn</label>
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr class="btn-mdb-color">
+                                        <th>#</th>
+                                        <th class="text-center"><input type="checkbox"></th>
+                                        <th>Tên sách</th>
+                                        <th>Thể loại</th>
+                                        <th>Chất lượng</th>
+                                        <th>Tình trạng</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <th class="text-center"><input type="checkbox" checked></th>
+                                        <th>Bàn có 5 chổ ngồi</th>
+                                        <th>Thiếu nhi</th>
+                                        <th>Tốt</th>
+                                        <th><a>Đang mượn</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <th class="text-center"><input type="checkbox"></th>
+                                        <th>Java cho người mới bắt đầu</th>
+                                        <th>Công nghệ</th>
+                                        <th>Tốt</th>
+                                        <th><a>Đã trả</a></th>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-11 btn-group">
+                                <a class="btn btn-mdb-color" style="float: right">Xóa</a>
+                                <a class="btn btn-mdb-color" style="float:right">Thêm</a>
+                            </div>
                         </div>
                         <div class="col-md-12 form-row" style="margin-top: 30px">
                             <div class="col-md-11">

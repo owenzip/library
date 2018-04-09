@@ -7,7 +7,8 @@
 <head>
     <jsp:include page="WEB-INF/jsp/lib-util.jsp"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Library Management</title>
+    <link rel="shortcut icon" href="<c:url value='/resources/img/logo.png'/>" />
+    <title>PHẦN MỀM QUẢN LÝ THƯ VIỆN</title>
 </head>
 <body style="background: #54657a">
 <div class="grandParentContaniner">
