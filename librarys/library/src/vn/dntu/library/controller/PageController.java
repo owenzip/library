@@ -18,6 +18,9 @@ public class PageController {
     @RequestMapping(value = "/nhanvien.do",method = RequestMethod.GET)
     public String nhanVien() { return "nhanvien"; }
 
+    @RequestMapping(value = "/danhmuc.do",method = RequestMethod.GET)
+    public String danhMuc() { return "danhmuc"; }
+
     @RequestMapping(value = "/thuvien.do",method = RequestMethod.GET)
     public String thuVien() { return "thuvien"; }
 

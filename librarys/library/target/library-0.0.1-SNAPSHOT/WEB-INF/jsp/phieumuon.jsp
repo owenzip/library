@@ -20,16 +20,22 @@
             <div class="card">
                 <div class="card-header mdb-color">
                     <div class="row">
-                        <div class="col-md-6" style="margin-top: 15px">
+                        <div class="col-md-4" style="margin-top: 15px">
                             <h4 style="color: white"><b>Danh mục phiếu mượn</b></h4>
                         </div>
-                        <div class="col-md-4" style="margin-top: 10px">
+                        <div class="col-md-2" style="margin-top: 10px">
                             <select class="form-control">
-                                <option>Xem tất cả ...</option>
-                                <option>Phiếu mượn gần đây</option>
-                                <option>Phiếu mượn đã hết hạn</option>
-                                <option>Quỹ tiền phạt</option>
+                                <option>Tìm kiếm theo ...</option>
+                                <option>Mã phiếu</option>
+                                <option>Người lập</option>
+                                <option>Người mượn</option>
+                                <option>Đã trả</option>
+                                <option>Đang mượn</option>
+                                <option>Hết hạn mượn</option>
                             </select>
+                        </div>
+                        <div class="col-md-4" style="margin-top: 10px">
+                            <input type="text" class="form-control" placeholder="Nhập thông tin...">
                         </div>
                         <div class="col-md-2">
                             <a class="btn btn-mdb-color">&nbsp&nbspXem&nbsp&nbsp</a>
@@ -59,7 +65,7 @@
                             <td>Thái Nguyễn</td>
                             <td>22/02/2018</td>
                             <td>28/02/2018</td>
-                            <td>Tốt</td>
+                            <td>Đã trả</td>
                         </tr>
                         <tr>
                             <td>2</td>
@@ -69,7 +75,7 @@
                             <td>Nhựt Nguyễn</td>
                             <td>22/02/2018</td>
                             <td>28/02/2018</td>
-                            <td>Tốt</td>
+                            <td>Đã trả</td>
                         </tr>
                         <tr>
                             <td>3</td>
@@ -79,7 +85,7 @@
                             <td>Thái Nguyễn</td>
                             <td>22/02/2018</td>
                             <td>28/02/2018</td>
-                            <td>Tốt</td>
+                            <td>Hết hạn mượn</td>
                         </tr>
                         <tr>
                             <td>4</td>
@@ -89,7 +95,7 @@
                             <td>Thái Nguyễn</td>
                             <td>22/02/2018</td>
                             <td>28/02/2018</td>
-                            <td>Tốt</td>
+                            <td>Đang mượn</td>
                         </tr>
                         <tr>
                             <td>5</td>
@@ -99,7 +105,7 @@
                             <td>Thái Nguyễn</td>
                             <td>22/02/2018</td>
                             <td>28/02/2018</td>
-                            <td>Tốt</td>
+                            <td>Đang mượn</td>
                         </tr>
                         </tbody>
                     </table>
@@ -118,13 +124,13 @@
                         <h4 style="color: white;margin-top: 25px;margin-left: 20px"><b>Thông tin chi tiết</b></h4>
                     </div>
                     <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                        <a class="btn btn-mdb-color" style="width: 300px;margin-top: 15px">LẬP PHIẾU MƯỢN</a>
+                    <div class="col-md-3" style="margin-left: 25px">
+                        <a class="btn btn-mdb-color" style="width:100%;margin-top: 15px">LẬP PHIẾU MƯỢN</a>
                     </div>
 
                 </div>
 
-                <div class="row form-group" style="margin-top: 50px;margin-left: 50px">
+                <div class="row form-group" style="margin-top: 50px;margin-left: 75px">
                     <div class="col-md-12 form-row">
                         <div class="col-md-2">
                             <label>Mã phiếu mượn</label>
@@ -179,20 +185,20 @@
                             <div class="col-md-11">
                                 <label>Sách mượn</label>
                                 <table class="table table-bordered">
-                                    <thead>
+                                    <thead class="text-center">
                                     <tr class="btn-mdb-color">
                                         <th>#</th>
-                                        <th class="text-center"><input type="checkbox"></th>
+                                        <th><input type="checkbox"></th>
                                         <th>Tên sách</th>
                                         <th>Thể loại</th>
                                         <th>Chất lượng</th>
                                         <th>Tình trạng</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="text-center">
                                     <tr>
                                         <th>1</th>
-                                        <th class="text-center"><input type="checkbox" checked></th>
+                                        <th><input type="checkbox" checked></th>
                                         <th>Bàn có 5 chổ ngồi</th>
                                         <th>Thiếu nhi</th>
                                         <th>Tốt</th>
@@ -200,7 +206,7 @@
                                     </tr>
                                     <tr>
                                         <th>2</th>
-                                        <th class="text-center"><input type="checkbox"></th>
+                                        <th><input type="checkbox"></th>
                                         <th>Java cho người mới bắt đầu</th>
                                         <th>Công nghệ</th>
                                         <th>Tốt</th>
@@ -238,12 +244,22 @@
                     <div class="card">
                         <div class="card-header mdb-color">
                             <div class="row">
-                                <div class="col-md-6" style="margin-top: 15px">
-                                    <h4 style="color: white"><b>Qũy tiền phạt, phí mượn</b></h4>
+                                <div class="col-md-4" style="margin-top: 15px">
+                                    <h4 style="color: white"><b>Phí mượn</b></h4>
                                 </div>
-                                <div class="col-md-4" style="margin-top: 10px">
+                                <div class="col-md-2" style="margin-top: 10px">
                                     <select class="form-control">
-                                        <option value="1">Hôm nay ...</option>
+                                        <option value="1">Chọn ngày...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 10px">
+                                    <select class="form-control">
+                                        <option value="1">Chọn tháng...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 10px">
+                                    <select class="form-control">
+                                        <option value="1">Chọn năm...</option>
                                     </select>
                                 </div>
                                 <div class="col-md-2">
@@ -252,7 +268,47 @@
                             </div>
                         </div>
                         <div class="card-body text-center">
-                            <h5>Coming soon...</h5>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr class="btn-mdb-color">
+                                    <th class="text-center">#</th>
+                                    <th>Mã phiếu</th>
+                                    <th>Thủ thư</th>
+                                    <th>Đọc giả</th>
+                                    <th>Ngày lập</th>
+                                    <th>Phí mượn</th>
+                                </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                <tr>
+                                    <th>1</th>
+                                    <th>#PM0001</th>
+                                    <th>Thái Nguyễn</th>
+                                    <th>Nhựt Nguyễn</th>
+                                    <th>26/03/2018</th>
+                                    <th>18.000 VNĐ</th>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <th>#PM0002</th>
+                                    <th>Hải Đăng</th>
+                                    <th>Bảo Phạm</th>
+                                    <th>30/03/2018</th>
+                                    <th>58.000 VNĐ</th>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="row form-row" style="margin-top: 25px">
+                                <div class="col-md-5"></div>
+                                <div class="col-md-2" style="margin-top: 5px">
+                                    <h4>Tổng cộng </h4>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" value="76.000 VNĐ">
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

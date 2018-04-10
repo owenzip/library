@@ -20,19 +20,22 @@
             <div class="card">
                 <div class="card-header mdb-color">
                     <div class="row">
-                        <div class="col-md-6" style="margin-top: 15px">
+                        <div class="col-md-4" style="margin-top: 15px">
                             <h4 style="color: white"><b>Danh mục sách</b></h4>
                         </div>
-                        <div class="col-md-4" style="margin-top: 10px">
+                        <div class="col-md-2" style="margin-top: 10px">
                             <select class="form-control">
                                 <option>Xem tất cả ...</option>
-                                <option>Sách đang yêu cầu</option>
-                                <option>Sách đang được mượn</option>
+                                <option>Đang yêu cầu</option>
+                                <option>Đang được mượn</option>
                                 <option>Số lượt mượn</option>
-                                <option>Sách đã thất lạc</option>
+                                <option>Đã thất lạc</option>
                                 <option>Sách hỏng</option>
-                                <option>Sách hết hạn mượn</option>
+                                <option>Hết hạn mượn</option>
                             </select>
+                        </div>
+                        <div class="col-md-4" style="margin-top: 10px">
+                            <input type="text" class="form-control" placeholder="Nhập tên sách...">
                         </div>
                         <div class="col-md-2">
                             <a class="btn btn-mdb-color">&nbsp&nbspXem&nbsp&nbsp</a>
@@ -42,7 +45,7 @@
                 <div class="card-body">
                     <table class="table table-bordered">
                         <thead>
-                        <tr>
+                        <tr class="btn-mdb-color">
                             <th>#</th>
                             <th>Tên sách</th>
                             <th>Tác giả</th>
@@ -107,7 +110,7 @@
                 <div style="width: 100%;height:80px;background: #45526e">
                     <h4 style="color: white;margin-top: 25px;margin-left: 20px"><b>Thông tin chi tiết</b></h4>
                 </div>
-                <div class="row form-group" style="margin-top: 50px;margin-left: 50px">
+                <div class="row form-group" style="margin-top: 50px;margin-left: 60px">
                     <div class="col-md-12 form-row">
                         <div class="col-md-3">
                             <label>Tên sách</label>
@@ -156,13 +159,13 @@
                     </div>
                     <div class="col-md-12 form-row" style="margin-top: 30px">
                         <div class="col-md-2">
-                            <label>Tình trạng sách</label>
+                            <label>Chất lượng sách</label>
                             <select type="text" class="form-control">
                                 <option>Mới</option>
                             </select>
                         </div>
                         <div class="col-md-2">
-                            <label>Tình trạng mượn</label>
+                            <label>Tình trạng</label>
                             <select type="text" class="form-control">
                                 <option>Đang mượn</option>
                             </select>
@@ -192,8 +195,8 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
                     </div>
                 </div>
                 <div class="col-md-12 form-row" style="margin-top: 40px;padding-bottom: 30px">
-                    <div class="col-md-4"></div>
-                    <div class="btn-group text-center" style="margin-left: 10px">
+                    <div class="col-md-3"></div>
+                    <div class="btn-group text-center" style="margin-left: 50px">
                         <a class="btn btn-mdb-color">Thêm</a>
                         <a class="btn btn-mdb-color">Xóa</a>
                         <a class="btn btn-mdb-color">Sửa</a>
@@ -207,19 +210,20 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
                     <div class="card">
                         <div class="card-header mdb-color">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <h4 style="color: white; margin-top: 15px"><b>Lịch sử mượn sách</b></h4>
                                 </div>
-                                <div class="col-md-4" style="margin-top: 10px">
+                                <div class="col-md-2" style="margin-top: 10px">
                                     <select class="form-control">
-                                        <option>Xem tất cả ...</option>
-                                        <option>Sách đang yêu cầu</option>
-                                        <option>Sách đang được mượn</option>
-                                        <option>Số lượt mượn</option>
-                                        <option>Sách đã thất lạc</option>
-                                        <option>Sách hỏng</option>
-                                        <option>Sách hết hạn mượn</option>
+                                        <option>Tìm kiếm theo ...</option>
+                                        <option>Người mượn</option>
+                                        <option>Thủ thư</option>
+                                        <option>Thời gian</option>
+                                        <option>Tình trạng</option>
                                     </select>
+                                </div>
+                                <div class="col-md-4" style="margin-top: 10px">
+                                    <input type="text" class="form-control" placeholder="Nhập thông tin...">
                                 </div>
                                 <div class="col-md-2">
                                     <a class="btn btn-mdb-color">&nbsp&nbspXem&nbsp&nbsp</a>
@@ -229,49 +233,55 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
                         <div class="card-body">
                             <table class="table table-bordered">
                                 <thead>
-                                <tr>
+                                <tr class="btn-mdb-color">
                                     <th>#</th>
-                                    <th>Tên sách</th>
                                     <th>Người mượn</th>
                                     <th>Thủ thư</th>
-                                    <th>Thời gian</th>
+                                    <th>Ngày mượn</th>
+                                    <th>Ngày trả</th>
+                                    <th>Tình trạng</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>Java cho người mới bắt đầu</td>
                                     <td>Nhựt Nguyễn</td>
-                                    <td>Công nghệ Đồng Nai</td>
-                                    <td>185.000</td>
+                                    <td>Thái Nguyễn</td>
+                                    <td>02/04/2018</td>
+                                    <td>07/04/2018</td>
+                                    <td>Đã trả</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td>Những cô em gái</td>
-                                    <td>Nguyễn Nhật Ánh</td>
-                                    <td>Trẻ</td>
-                                    <td>78.000</td>
+                                    <td>Thái Nguyễn</td>
+                                    <td>Hải Đăng</td>
+                                    <td>15/12/2017</td>
+                                    <td>20/12/2017</td>
+                                    <td>Đã trả</td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td>Thủ thuật UX/UI</td>
-                                    <td>Lead Team</td>
-                                    <td>Tin học</td>
-                                    <td>168.000</td>
+                                    <td>Hải Đăng</td>
+                                    <td>Nhựt Nguyễn</td>
+                                    <td>04/04/2018</td>
+                                    <td>14/04/2018</td>
+                                    <td>Hết hạn mượn</td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
-                                    <td>Bàn có 5 chổ ngồi</td>
-                                    <td>Nguyễn Nhật Ánh</td>
-                                    <td>Trẻ</td>
-                                    <td>208.000</td>
+                                    <td>Bảo Phạm</td>
+                                    <td>Hải Đăng</td>
+                                    <td>02/07/2017</td>
+                                    <td>07/07/2017</td>
+                                    <td>Đã trả</td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
-                                    <td>Kỹ năng sống cần có</td>
-                                    <td>Wild lifer</td>
-                                    <td>Wild</td>
-                                    <td>325.000</td>
+                                    <td>Minh Nguyễn</td>
+                                    <td>Bảo Phạm</td>
+                                    <td>10/04/2018</td>
+                                    <td>17/04/2018</td>
+                                    <td>Đang mượn</td>
                                 </tr>
                                 </tbody>
                             </table>

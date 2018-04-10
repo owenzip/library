@@ -6,6 +6,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <footer style="margin-top: 50px">
-    <p style="text-align: center;">Bản quyền thuộc về đội ngũ <kbd>DEVELOPER-14DTH1 2018 trường DNTU</kbd></p>
+    <p style="text-align: center;">Bản quyền thuộc về nhóm  &nbsp&nbsp<a class="badge badge-light"> DEV-14 DNTU</a>&nbsp&nbsp năm 2018</p>
 </footer>
 </html>

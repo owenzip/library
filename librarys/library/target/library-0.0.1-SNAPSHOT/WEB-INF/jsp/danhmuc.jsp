@@ -6,13 +6,13 @@
 <html>
 <head>
     <jsp:include page="lib-util.jsp"/>
-    <title>QUẢN LÝ NHÂN VIÊN</title>
+    <title>DANH MỤC</title>
 </head>
 <body style="background: #f6f6f6">
 <jsp:include page="navbar.jsp"/>
 <div class="container" style="width: 90%">
     <div class="text-center" style="margin-top: 40px">
-        <h2><b>Quản lý nhân viên + Tạo tài khoản theo ID nhân viên (Page này chỉ quyền Admin)</b></h2>
+        <h2><b>Thêm-Sửa-Xóa các danh mục có trong Database</b></h2>
     </div>
 </div>
 </body>

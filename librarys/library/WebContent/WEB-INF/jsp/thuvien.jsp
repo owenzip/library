@@ -13,14 +13,27 @@
 <div class="container" style="width: 90%">
     <div class="text-center" style="margin-top: 40px">
         <h2><b>THƯ VIỆN ONLINE</b></h2>
-        <a class="btn btn-mdb-color" data-toggle="modal" data-target="#contactModal">&nbsp&nbspChia sẻ&nbsp&nbsp</a>
         <div class="row" style="margin-top: 30px">
             <div class="col-md-12" style="margin-top: 10px">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-4" style="margin-top: 15px">
+                        <input type="text" class="form-control" placeholder="Nhập tên sách ...">
+                    </div>
+                    <div class="col-md-1" style="margin-top: 5px">
+                        <a class="btn btn-mdb-color">Tìm</a>
+                    </div>
+                    <div class="col-md-2" style="margin-top: 5px">
+                        <a class="btn btn-mdb-color" data-toggle="modal" data-target="#contactModal">Chia sẻ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" style="margin-top: 20px">
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col-md-1 text-center" style="margin-top: 15px">
-                                <kbd>.PDF</kbd>
+                            <div class="col-md-1" style="margin-top: 15px">
+                                <a class="badge badge-light">.PDF</a>
                             </div>
                             <div class="col-md-4" style="margin-top: 15px">
                                 <h5><b>Bàn có 5 chổ ngồi</b></h5>
@@ -39,7 +52,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-1 text-center" style="margin-top: 15px">
-                                <kbd>.DOCX</kbd>
+                                <a class="badge badge-light">.PDF</a>
                             </div>
                             <div class="col-md-4" style="margin-top: 15px">
                                 <h5><b>Java cho người mới bắt đàu</b></h5>
@@ -58,7 +71,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-1 text-center" style="margin-top: 15px">
-                                <kbd>.EXC</kbd>
+                                <a class="badge badge-light">.DOC</a>
                             </div>
                             <div class="col-md-4" style="margin-top: 15px">
                                 <h5><b>Mẫu hóa đơn bán hàng</b></h5>
@@ -77,7 +90,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-1 text-center" style="margin-top: 15px">
-                                <kbd>.PDF</kbd>
+                                <a class="badge badge-light">.PDF</a>
                             </div>
                             <div class="col-md-4" style="margin-top: 15px">
                                 <h5><b>Clean Code</b></h5>
@@ -96,7 +109,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-1 text-center" style="margin-top: 15px">
-                                <kbd>.PDF</kbd>
+                                <a class="badge badge-light">.PDF</a>
                             </div>
                             <div class="col-md-4" style="margin-top: 15px">
                                 <h5><b>Những cô em gái</b></h5>
@@ -115,7 +128,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-1 text-center" style="margin-top: 15px">
-                                <kbd>.DOCX</kbd>
+                                <a class="badge badge-light">.EXC</a>
                             </div>
                             <div class="col-md-4" style="margin-top: 15px">
                                 <h5><b>Tài liệu kham khảo Android</b></h5>
@@ -134,7 +147,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-1 text-center" style="margin-top: 15px">
-                                <kbd>.PDF</kbd>
+                                <a class="badge badge-light">.DOC</a>
                             </div>
                             <div class="col-md-4" style="margin-top: 15px">
                                 <h5><b>Phân tích thiết kế phần mềm</b></h5>
@@ -153,7 +166,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-1 text-center" style="margin-top: 15px">
-                                <kbd>.PDF</kbd>
+                                <a class="badge badge-light">.PDF</a>
                             </div>
                             <div class="col-md-4" style="margin-top: 15px">
                                 <h5><b>Quy trình phát triển sản phẩm</b></h5>
@@ -172,7 +185,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-1 text-center" style="margin-top: 15px">
-                                <kbd>.PDF</kbd>
+                                <a class="badge badge-light">.PDF</a>
                             </div>
                             <div class="col-md-4" style="margin-top: 15px">
                                 <h5><b>Hóa hữu cơ</b></h5>
@@ -191,7 +204,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-1 text-center" style="margin-top: 15px">
-                                <kbd>.PDF</kbd>
+                                <a class="badge badge-light">.PDF</a>
                             </div>
                             <div class="col-md-4" style="margin-top: 15px">
                                 <h5><b>Định luật hấp dẫn</b></h5>
@@ -210,7 +223,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-1 text-center" style="margin-top: 15px">
-                                <kbd>.PDF</kbd>
+                                <a class="badge badge-light">.PDF</a>
                             </div>
                             <div class="col-md-4" style="margin-top: 15px">
                                 <h5><b>Kỹ năng sống cần có</b></h5>
