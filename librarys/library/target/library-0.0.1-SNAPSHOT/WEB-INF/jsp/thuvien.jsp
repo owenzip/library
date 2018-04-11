@@ -248,7 +248,7 @@
         <div class="modal-content">
             <div class="card">
                 <div class="card-header mdb-color">
-                    <h3 style="color: white;margin-top: 5px"><b>Chia sẽ tài liệu</b></h3>
+                    <h3 style="color: white;margin-top: 5px"><b>Chia sẻ tài liệu</b></h3>
                 </div>
                 <div class="card-body">
                     <label style="margin-top: 20px">Chọn định dạng</label>

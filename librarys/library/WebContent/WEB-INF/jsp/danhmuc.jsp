@@ -12,7 +12,14 @@
 <jsp:include page="navbar.jsp"/>
 <div class="container" style="width: 90%">
     <div class="text-center" style="margin-top: 40px">
-        <h2><b>Thêm-Sửa-Xóa các danh mục có trong Database</b></h2>
+        <h2>
+            <b>
+                KHU VỰC ADMIN
+                </br> Thêm-Sữa-Xóa các danh mục có trong DB gồm danh mục :
+                </br> Bình chọn, Chất lượng, Chức vụ, Định dạng, Ngành, Nhà cung cấp, Nhà xuất bản, Quyền, Tác giả, Thể loại, Tình trạng, Vấn đề, Vi phạm   </br>
+                </br> Chức năng quản lý Tài Khoản người dùng
+            </b>
+        </h2>
     </div>
 </div>
 </body>

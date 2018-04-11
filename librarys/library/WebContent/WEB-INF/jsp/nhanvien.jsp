@@ -12,7 +12,215 @@
 <jsp:include page="navbar.jsp"/>
 <div class="container" style="width: 90%">
     <div class="text-center" style="margin-top: 40px">
-        <h2><b>Quản lý nhân viên + Tạo tài khoản theo ID nhân viên (Page này chỉ quyền Admin)</b></h2>
+        <h2><b>QUẢN LÝ NHÂN VIÊN</b></h2>
+    </div>
+    <div class="row" style="margin-top: 30px">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header mdb-color">
+                    <div class="row">
+                        <div class="col-md-4" style="margin-top: 15px">
+                            <h4 style="color: white"><b>Danh sách nhân viên</b></h4>
+                        </div>
+                        <div class="col-md-2" style="margin-top: 10px">
+                            <select class="form-control">
+                                <option>Tìm kiếm theo ...</option>
+                                <option>Mã nhân viên</option>
+                                <option>Tên nhân viên</option>
+                                <option>Số điện thoại</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4" style="margin-top: 10px">
+                            <input type="text" class="form-control" placeholder="Nhập thông tin...">
+                        </div>
+                        <div class="col-md-2">
+                            <a class="btn btn-mdb-color">&nbsp&nbspXem&nbsp&nbsp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr class="btn-mdb-color">
+                            <th>#</th>
+                            <th>Mã nhân viên</th>
+                            <th>Tên nhân viên</th>
+                            <th>Chức vụ</th>
+                            <th>Số điện thoại</th>
+                            <th>Số điện thoại</th>
+                            <th>Email</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <nav style="float: right    ">
+                        <ul class="pagination">
+                            <li class="page-item disabled"><span class="page-link">Trước</span></li>
+                            <li class="page-item"><a class="page-link"> 1</a></li>
+                            <li class="page-item"><a class="page-link">2</a></li>
+                            <li class="page-item"><a class="page-link">3</a></li>
+                            <li class="page-item"><a class="page-link">Sau</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="row form-row" style="width: 100%;height:80px;background: #45526e; margin-left: 0px">
+                    <div class="col-md-4">
+                        <h4 style="color: white;margin-top: 25px;margin-left: 20px"><b>Thông tin chi tiết</b></h4>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-3" style="margin-left: 25px">
+                        <a class="btn btn-mdb-color" style="width:100%;margin-top: 15px">THÊM NHÂN VIÊN</a>
+                    </div>
+
+                </div>
+
+                <div class="row form-group" style="margin-top: 50px;margin-left: 75px">
+                    <div class="col-md-12 form-row">
+                        <div class="col-md-2">
+                            <label>Mã nhân viên</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label>Tên nhân viên</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label>Ngày sinh</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label>chức vụ</label>
+                            <select type="text" class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="col-md-12 form-row" style="margin-top: 30px">
+                        <div class="col-md-2">
+                            <label>Số điện thoại</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label>Email</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <label>CMND</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-12 form-row" style="margin-top: 40px;padding-bottom: 30px">
+                        <div class="col-md-3"></div>
+                        <div class="btn-group text-center">
+                            <a class="btn btn-mdb-color">Tạo tài khoản</a>
+                            <a class="btn btn-mdb-color">Xóa</a>
+                            <a class="btn btn-mdb-color">Sửa</a>
+                            <a class="btn btn-mdb-color">Lưu</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <%--XEM PHÍ MƯỢN--%>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header mdb-color">
+                            <div class="row">
+                                <div class="col-md-4" style="margin-top: 15px">
+                                    <h4 style="color: white"><b>Lịch sử lập phiếu mượn</b></h4>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 10px">
+                                    <select class="form-control">
+                                        <option value="1">Chọn ngày...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 10px">
+                                    <select class="form-control">
+                                        <option value="1">Chọn tháng...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 10px">
+                                    <select class="form-control">
+                                        <option value="1">Chọn năm...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <a class="btn btn-mdb-color">&nbsp&nbspXem&nbsp&nbsp</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr class="btn-mdb-color">
+                                    <th class="text-center">#</th>
+                                    <th>Mã phiếu</th>
+                                    <th>Người mượn</th>
+                                    <th>Ngày lập</th>
+                                    <th>Ngày nhận</th>
+                                    <th>Tình trạng</th>
+                                    <th>Phí mượn</th>
+                                </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                <tr>
+                                    <th>1</th>
+                                    <th>#PM0001</th>
+                                    <th>Thái Nguyễn</th>
+                                    <th>26/03/2018</th>
+                                    <th>26/03/2018</th>
+                                    <th>Đã trả</th>
+                                    <th>18.000 VNĐ</th>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <th>#PM0002</th>
+                                    <th>Bảo Phạm</th>
+                                    <th>30/03/2018</th>
+                                    <th>26/03/2018</th>
+                                    <th>Đang mượn</th>
+                                    <th>58.000 VNĐ</th>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%--XEM THỐNG KÊ--%>
+            <div class="row" style="margin-top: 30px">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header mdb-color">
+                            <div class="row">
+                                <div class="col-md-6" style="margin-top: 15px">
+                                    <h4 style="color: white"><b>Thống kê</b></h4>
+                                </div>
+                                <div class="col-md-4" style="margin-top: 10px">
+                                    <select class="form-control">
+                                        <option value="1">Hôm nay ...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <a class="btn btn-mdb-color">&nbsp&nbspXem&nbsp&nbsp</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h4 style="margin-top: 20px">Tổng số nhân viên<b>24 người</b></h4>
+                            </div>
+                            <label style="margin-top: 20px">Nhân viên lập phiếu mượn nhiều nhất <b>Nguyễn Quốc Thái (57 phiếu)</b></label>
+                            <div class="progress">
+                                <div class="progress-bar mdb-color" style="width:95%"></div>
+                            </div>
+                            <label  style="margin-top: 20px">Tổng số phí mượn <b>1.425.000 VNĐ</b></label>
+                            <div class="progress">
+                                <div class="progress-bar mdb-color" style="width:24%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
