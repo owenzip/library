@@ -5,10 +5,13 @@
 <script type="text/javascript" src="/resources/js/bootstrap.js"></script>
 <script type="text/javascript" src="/resources/js/mdb.js"></script>
 <script type="text/javascript" src="/resources/js/popper.min.js"></script>
+<script type="text/javascript" src="/resources/js/datatables.js"></script>
+
 <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
 <link href="/resources/css/bootstrap.css" rel="stylesheet">
 <link href="/resources/css/library-style.css" rel="stylesheet">
 <link href="/resources/css/bootstrap-grid.css" rel="stylesheet">
 <link href="/resources/css/bootstrap-reboot.css" rel="stylesheet">
 <link href="/resources/css/mdb.css" rel="stylesheet">
+<link href="/resources/css/datatables.css" rel="stylesheet">
 </html>

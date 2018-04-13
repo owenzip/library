@@ -19,13 +19,13 @@
             <div class="card-body">
                 <form>
                     <p class="h5 text-center py-4">ĐĂNG NHẬP</p>
-                    <label>Tên đăng nhập</label>
-                    <input type="text" class="form-control" value="admin">
+                    <label>Mã số</label>
+                    <input id="tenDangNhap" name="tenDangNhap" type="text" class="form-control" placeholder="Nhập mã số">
                     <br>
                     <label>Mật khẩu</label>
-                    <input type="password" class="form-control" value="admin">
+                    <input id="matKhau" name="matKhau" type="password" class="form-control" placeholder="Nhập mật khẩu">
                     <div class="text-center" style="margin-top: 20px">
-                        <a href="<c:url value='/homepage.do'/>" class="btn btn-mdb-color">XÁC NHẬN</a>
+                        <a id="btnXacNhan" <%--href="<c:url value='/homepage.do'/>"--%> class="btn btn-mdb-color">XÁC NHẬN</a>
                     </div>
                     <div class="text-center">
                         <a href="<c:url value='/homepage.do'/>" class="btn btn-link" data-toggle="modal" data-target="#contactModal">LIÊN HỆ VỚI QUẢN TRỊ</a>
@@ -68,5 +68,6 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="<c:url value='/resources/js/login.js' />"></script>
 </body>
 </html>

@@ -29,7 +29,4 @@ public class PageController {
 
     @RequestMapping(value = "/trogiup.do",method = RequestMethod.GET)
     public String troGiup() { return "trogiup"; }
-
-    @RequestMapping(value = "/",method = RequestMethod.GET)
-    public String loginPage() { return ""; }
 }
