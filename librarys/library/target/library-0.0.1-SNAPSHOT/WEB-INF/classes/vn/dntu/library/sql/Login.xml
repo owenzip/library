@@ -7,10 +7,49 @@
         <result property="tenTaiKhoan" column="tentaikhoan"/>
         <result property="matKhau" column="matkhau"/>
         <result property="idQuyen" column="idquyen"/>
+        <result property="tenNhanVien" column="tennhanvien"/>
+        <result property="idNhanVien" column="idnhanvien"/>
+        <result property="idVanDe" column="idvande"/>
+        <result property="tenVanDe" column="tenvande"/>
+        <result property="noiDung" column="noidung"/>
+        <result property="sdt" column="sdt"/>
     </resultMap>
 
-    <select id="getStudenByUsername" resultMap="LoginVO">
-        SELECT * FROM taikhoan WHERE tentaikhoan = #{tenTakKhoan}
+    <select id="checkLogin" resultMap="LoginVO">
+        SELECT *
+        FROM taikhoan
+        WHERE tentaikhoan = #{tenTaiKhoan}
+        AND matkhau = #{matKhau}
     </select>
+
+    <select id="selectListAdmin" resultMap="LoginVO">
+        SELECT
+        nv.tennhanvien,
+        nv.idnhanvien
+        FROM nhanvien nv
+        LEFT JOIN taikhoan tk ON nv.idtaikhoan = tk.idtaikhoan
+        WHERE tk.idquyen = 1
+    </select>
+
+    <select id="selectListProblem" resultMap="LoginVO">
+        SELECT
+        idvande,
+        tenvande
+        FROM dmvande
+    </select>
+
+    <insert id="insertContact" parameterType="LoginVO">
+        INSERT INTO lienhe (
+        idvande,
+        sdt,
+        noidung,
+        idnhanvien
+        ) VALUES (
+        #{idVanDe},
+        #{sdt},
+        #{noiDung},
+        #{idNhanVien}
+        )
+    </insert>
 </mapper>
 

@@ -350,6 +350,6 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
 </div>
 </body>
 <jsp:include page="footer.jsp"/>
-<script type="text/javascript" src="<c:url value='/resources/js/book.js' />"></script>
+<script type="text/javascript" src="<c:url value='/resources/forms/book.js' />"></script>
 </html>
 

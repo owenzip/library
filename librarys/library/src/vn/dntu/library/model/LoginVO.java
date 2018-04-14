@@ -1,3 +1,10 @@
+/**
+ * The LIBRARY application build on open source technologis
+ * and follow APACHE License 2.0 Jan 2004
+ * @author Nhựt Nguyễn
+ * @version 1.0
+ * @since 15/04/2018
+ */
 package vn.dntu.library.model;
 
 import org.apache.ibatis.type.Alias;
@@ -9,6 +16,60 @@ public class LoginVO {
     private String tenTaiKhoan;
     private String matKhau;
     private int idQuyen;
+    private String tenNhanVien;
+    private int idNhanVien;
+    private int idVanDe;
+    private String tenVanDe;
+    private String noiDung;
+    private int sdt;
+
+    public int getSdt() {
+        return sdt;
+    }
+
+    public void setSdt(int sdt) {
+        this.sdt = sdt;
+    }
+
+    public String getNoiDung() {
+        return noiDung;
+    }
+
+    public void setNoiDung(String noiDung) {
+        this.noiDung = noiDung;
+    }
+
+    public int getIdVanDe() {
+        return idVanDe;
+    }
+
+    public void setIdVanDe(int idVanDe) {
+        this.idVanDe = idVanDe;
+    }
+
+    public String getTenVanDe() {
+        return tenVanDe;
+    }
+
+    public void setTenVanDe(String tenVanDe) {
+        this.tenVanDe = tenVanDe;
+    }
+
+    public int getIdNhanVien() {
+        return idNhanVien;
+    }
+
+    public void setIdNhanVien(int idNhanVien) {
+        this.idNhanVien = idNhanVien;
+    }
+
+    public String getTenNhanVien() {
+        return tenNhanVien;
+    }
+
+    public void setTenNhanVien(String tenNhanVien) {
+        this.tenNhanVien = tenNhanVien;
+    }
 
     public int getIdTaiKhoan() {
         return idTaiKhoan;
