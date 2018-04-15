@@ -16,6 +16,22 @@
         <result property="tenTacGia" column="tentacgia"/>
         <result property="tenNhaXuatBan" column="tennhaxuatban"/>
         <result property="soLuong" column="soluong"/>
+        <result property="idTheLoai" column="idtheloai"/>
+        <result property="tenTheLoai" column="tentheloai"/>
+        <result property="idNhaXuatBan" column="idnhaxuatban"/>
+        <result property="idNhaCungCap" column="idnhacungcap"/>
+        <result property="tenNhaCungCap" column="tennhacungcap"/>
+        <result property="idChatLuong" column="idchatluong"/>
+        <result property="tenChatLuong" column="tenchatluong"/>
+        <result property="idTinhTrang" column="idtinhtrang"/>
+        <result property="tenTinhTrang" column="tentinhtrang"/>
+        <result property="idBinhChon" column="idbinhchon"/>
+        <result property="tenBinhChon" column="tenbinhchon"/>
+        <result property="idTacGia" column="idtacgia"/>
+        <result property="ngayXuatBan" column="ngayxuatban"/>
+        <result property="ngayNhap" column="ngaynhap"/>
+        <result property="trang" column="trang"/>
+        <result property="moTa" column="mota"/>
     </resultMap>
 
     <select id="selectBookTable" resultMap="BookVO">
@@ -31,5 +47,74 @@
         LEFT JOIN dmnhaxuatban xb ON sa.idnhaxuatban = xb.idnhaxuatban
         GROUP BY sa.tensach
     </select>
+
+    <select id="selectListBookKind" resultMap="BookVO">
+        SELECT
+        idtheloai,
+        tentheloai
+        FROM dmtheloai
+    </select>
+
+    <select id="selectListBookProducer" resultMap="BookVO">
+        SELECT
+        idnhaxuatban,
+        tennhaxuatban
+        FROM dmnhaxuatban
+    </select>
+
+    <select id="selectListBookSupplier" resultMap="BookVO">
+        SELECT
+        idnhacungcap,
+        tennhacungcap
+        FROM dmnhacungcap
+    </select>
+
+    <select id="selectListBookQuality" resultMap="BookVO">
+        SELECT
+        idchatluong,
+        tenchatluong
+        FROM dmchatluong
+    </select>
+
+    <select id="selectListBookStatus" resultMap="BookVO">
+        SELECT
+        idtinhtrang,
+        tentinhtrang
+        FROM dmtinhtrang
+    </select>
+
+    <select id="selectListBookVoted" resultMap="BookVO">
+        SELECT
+        idbinhchon,
+        tenbinhchon
+        FROM dmbinhchon
+    </select>
+
+    <select id="selectListBookAuthor" resultMap="BookVO">
+        SELECT
+        idtacgia,
+        tentacgia
+        FROM dmtacgia
+    </select>
+
+    <select id="selectBookInfo" resultMap="BookVO">
+        SELECT
+        sa.tensach,
+        sa.idtacgia,
+        sa.idtheloai,
+        sa.idnhaxuatban,
+        sa.ngayxuatban,
+        sa.ngaynhap,
+        sa.gianhap,
+        sa.trang,
+        sa.idnhacungcap,
+        sa.idchatluong,
+        sa.idtinhtrang,
+        sa.idbinhchon,
+        sa.mota
+        FROM sach sa
+        WHERE sa.idsach = #{idSach}
+    </select>
+
 </mapper>
 

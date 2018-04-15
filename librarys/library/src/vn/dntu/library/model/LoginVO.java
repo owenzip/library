@@ -11,17 +11,16 @@ import org.apache.ibatis.type.Alias;
 
 @Alias("LoginVO")
 public class LoginVO {
-
     private int idTaiKhoan;
-    private String tenTaiKhoan;
-    private String matKhau;
     private int idQuyen;
-    private String tenNhanVien;
     private int idNhanVien;
     private int idVanDe;
+    private int sdt;
+    private String tenTaiKhoan;
+    private String matKhau;
     private String tenVanDe;
     private String noiDung;
-    private int sdt;
+    private String tenNhanVien;
 
     public int getSdt() {
         return sdt;

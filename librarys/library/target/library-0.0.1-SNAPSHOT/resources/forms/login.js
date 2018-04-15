@@ -84,10 +84,9 @@ $(function () {
     let selectListAdminAndProblem = function () {
         $('#btnLienHe').on('click', function () {
             $.ajax({
-                url: URL_SELECT_LIST_ADMIN
-                , data: {}
-                , type: "POST"
-                , success: function (data) {
+                url: URL_SELECT_LIST_ADMIN,
+                type: "POST",
+                success: function (data) {
                     if (data) {
                         $.each(data, function (i) {
                             $('#selAdminName').append('<option value="' + data[i]["idNhanVien"] + '">' + data[i]["tenNhanVien"] + '</option>');
@@ -96,10 +95,9 @@ $(function () {
                 }
             });
             $.ajax({
-                url: URL_SELECT_LIST_PROBLEM
-                , data: {}
-                , type: "POST"
-                , success: function (data) {
+                url: URL_SELECT_LIST_PROBLEM,
+                type: "POST",
+                success: function (data) {
                     if (data) {
                         $.each(data, function (i) {
                             $('#selProblem').append('<option value="' + data[i]["idVanDe"] + '">' + data[i]["tenVanDe"] + '</option>');
@@ -146,15 +144,15 @@ $(function () {
                 });
             } else {
                 $.ajax({
-                    url: URL_INSERT_CONTACT
-                    , data: {
+                    url: URL_INSERT_CONTACT,
+                    data: {
                         'idNhanVien': idNhanVien,
                         'idVanDe': idVanDe,
                         'sdt': sdt,
                         'noiDung': noiDung
-                    }
-                    , type: "POST"
-                    , success: function (data) {
+                    },
+                    type: "POST",
+                    success: function (data) {
                         if (data) {
                             $.confirm({
                                 title: 'Đã gửi liên hệ thành công',

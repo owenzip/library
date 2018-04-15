@@ -61,96 +61,6 @@
                             <th>Số cuốn</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <th>#</th>
-                            <th>Tên sách</th>
-                            <th>Tác giả</th>
-                            <th>NXB</th>
-                            <th>Giá</th>
-                            <th>Số cuốn</th>
-                        </tr>
-                        <tr>
-                            <th>#</th>
-                            <th>Tên sách</th>
-                            <th>Tác giả</th>
-                            <th>NXB</th>
-                            <th>Giá</th>
-                            <th>Số cuốn</th>
-                        </tr>
-                        <tr>
-                            <th>#</th>
-                            <th>Tên sách</th>
-                            <th>Tác giả</th>
-                            <th>NXB</th>
-                            <th>Giá</th>
-                            <th>Số cuốn</th>
-                        </tr>
-                        <tr>
-                            <th>#</th>
-                            <th>Tên sách</th>
-                            <th>Tác giả</th>
-                            <th>NXB</th>
-                            <th>Giá</th>
-                            <th>Số cuốn</th>
-                        </tr>
-                        <tr>
-                            <th>#</th>
-                            <th>Tên sách</th>
-                            <th>Tác giả</th>
-                            <th>NXB</th>
-                            <th>Giá</th>
-                            <th>Số cuốn</th>
-                        </tr>
-                        <tr>
-                            <th>#</th>
-                            <th>Tên sách</th>
-                            <th>Tác giả</th>
-                            <th>NXB</th>
-                            <th>Giá</th>
-                            <th>Số cuốn</th>
-                        </tr>
-                        <tr>
-                            <th>#</th>
-                            <th>Tên sách</th>
-                            <th>Tác giả</th>
-                            <th>NXB</th>
-                            <th>Giá</th>
-                            <th>Số cuốn</th>
-                        </tr>
-                        <tr>
-                            <th>#</th>
-                            <th>Tên sách</th>
-                            <th>Tác giả</th>
-                            <th>NXB</th>
-                            <th>Giá</th>
-                            <th>Số cuốn</th>
-                        </tr>
-                        <tr>
-                            <th>#</th>
-                            <th>Tên sách</th>
-                            <th>Tác giả</th>
-                            <th>NXB</th>
-                            <th>Giá</th>
-                            <th>Số cuốn</th>
-                        </tr>
-                        <tr>
-                            <th>#</th>
-                            <th>Tên sách</th>
-                            <th>Tác giả</th>
-                            <th>NXB</th>
-                            <th>Giá</th>
-                            <th>Số cuốn</th>
-                        </tr>
-                        <tr>
-                            <th>#</th>
-                            <th>Tên sách</th>
-                            <th>Tác giả</th>
-                            <th>NXB</th>
-                            <th>Giá</th>
-                            <th>Số cuốn</th>
-                        </tr>
-                        </tbody>
                     </table>
                 </div>
                 <div style="width: 100%;height:80px;background: #45526e">
@@ -160,83 +70,69 @@
                     <div class="col-md-12 form-row">
                         <div class="col-md-3">
                             <label>Tên sách</label>
-                            <input type="text" class="form-control" value="Java cho người mới bắt đầu">
+                            <input id="tenSach" name="tenSach" type="text" class="form-control">
                         </div>
                         <div class="col-md-3">
                             <label>Tác giả</label>
-                            <input type="text" class="form-control" value="Nhựt Nguyễn">
+                            <select id="idTacGia" name="idTacGia" type="text" class="form-control"></select>
                         </div>
                         <div class="col-md-2">
                             <label>Thể loại</label>
-                            <select type="text" class="form-control">
-                                <option>Công nghệ</option>
-                            </select>
+                            <select id="idTheLoai" name="idTheLoai" type="text" class="form-control"></select>
                         </div>
                         <div class="col-md-3">
                             <label>Nhà xuất bản</label>
-                            <select type="text" class="form-control">
-                                <option>Công nghệ Đồng Nai</option>
-                            </select>
+                            <select id="idNhaXuatBan" name="idNhaXuatBan" type="text" class="form-control"></select>
                         </div>
                     </div>
                     <div class="col-md-12 form-row" style="margin-top: 30px">
                         <div class="col-md-2">
                             <label>Ngày xuất bản</label>
-                            <input type="text" class="form-control" value="04/04/2014">
+                            <input id="ngayXuatBan" name="ngayXuatBan" type="text" class="form-control">
                         </div>
                         <div class="col-md-2">
                             <label>Ngày nhập</label>
-                            <input type="text" class="form-control" value="07/07/2017">
+                            <input id="ngayNhap" name="ngayNhap" type="text" class="form-control">
                         </div>
                         <div class="col-md-2">
                             <label>Giá nhập</label>
-                            <input type="text" class="form-control" value="185.000 VNĐ">
+                            <input id="giaNhap" name="giaNhap" type="text" class="form-control">
                         </div>
                         <div class="col-md-2">
                             <label>Số trang</label>
-                            <input type="text" class="form-control" value="217 trang">
+                            <input id="trang" name="trang" type="text" class="form-control">
                         </div>
                         <div class="col-md-3">
                             <label>Nhà cung cấp</label>
-                            <select type="text" class="form-control">
-                                <option>Nhà sách Phương Nam</option>
-                            </select>
+                            <select id="idNhaCungCap" name="idNhaCungCap" type="text" class="form-control"></select>
                         </div>
                     </div>
                     <div class="col-md-12 form-row" style="margin-top: 30px">
                         <div class="col-md-2">
                             <label>Chất lượng sách</label>
-                            <select type="text" class="form-control">
-                                <option>Mới</option>
-                            </select>
+                            <select id="idChatLuong" name="idChatLuong" type="text" class="form-control"></select>
                         </div>
                         <div class="col-md-2">
                             <label>Tình trạng</label>
-                            <select type="text" class="form-control">
-                                <option>Đang mượn</option>
-                            </select>
+                            <select id="idTinhTrang" name="idTinhTrang" type="text" class="form-control"></select>
                         </div>
                         <div class="col-md-2">
                             <label>Số lượt mượn</label>
-                            <input type="text" class="form-control" value="17 lượt">
+                            <input type="text" class="form-control">
                         </div>
                         <div class="col-md-2">
                             <label>Bình chọn</label>
-                            <select type="text" class="form-control">
-                                <option>Khá hay</option>
-                            </select>
+                            <select id="idBinhChon" name="idBinhChon" type="text" class="form-control"></select>
                         </div>
                         <div class="col-md-3">
                             <label>Số lượng</label>
-                            <input type="text" class="form-control" value="3 cuốn">
+                            <input id="soLuong" name="soLuong" type="text" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-12 form-row" style="margin-top: 30px">
                         <div class="col-md-11">
                             <label>Mô tả</label>
-                            <textarea class="form-control" rows="3">
-Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng không có gì khó hiểu khi Java đã trở thành ngôn ngữ lập trình phổ biến nhất được sử dụng bởi các lập trình viên giỏi, những người muốn dành nhiều thời gian của mình để thư giãn trong các quán cà phê hơn là phải ngồi hì hục viết những dòng code ...
-                            </textarea>
+                            <textarea id="moTa" name="moTa" class="form-control" rows="3"></textarea>
                         </div>
                     </div>
                 </div>
@@ -247,7 +143,6 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
                         <a class="btn btn-mdb-color">Xóa</a>
                         <a class="btn btn-mdb-color">Sửa</a>
                         <a class="btn btn-mdb-color">Lưu</a>
-                    </div>
                 </div>
             </div>
             <%--XEM LỊCH SỬ--%>
