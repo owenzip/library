@@ -1,3 +1,10 @@
+<%--
+ - The LIBRARY application build on open source technologis
+ - and follow APACHE License 2.0 Jan 2004
+ - @author Nhựt Nguyễn
+ - @version 1.0
+ - @since 15/04/2018
+ --%>
 <!DOCTYPE html>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -38,14 +45,14 @@
                             <input type="text" class="form-control" placeholder="Nhập tên sách...">
                         </div>
                         <div class="col-md-2">
-                            <a class="btn btn-mdb-color">&nbsp&nbspXem&nbsp&nbsp</a>
+                            <a id="btnSearch" class="btn btn-mdb-color">&nbsp&nbspXem&nbsp&nbsp</a>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-bordered">
-                        <thead>
-                        <tr class="btn-mdb-color">
+                    <table id="tblBook" class="table table-hover">
+                        <thead class="btn-mdb-color">
+                        <tr>
                             <th>#</th>
                             <th>Tên sách</th>
                             <th>Tác giả</th>
@@ -56,56 +63,95 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>Java cho người mới bắt đầu</td>
-                            <td>Nhựt Nguyễn</td>
-                            <td>Công nghệ Đồng Nai</td>
-                            <td>185.000</td>
-                            <td>2</td>
+                            <th>#</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>NXB</th>
+                            <th>Giá</th>
+                            <th>Số cuốn</th>
                         </tr>
                         <tr>
-                            <td>2</td>
-                            <td>Những cô em gái</td>
-                            <td>Nguyễn Nhật Ánh</td>
-                            <td>Trẻ</td>
-                            <td>78.000</td>
-                            <td>4</td>
+                            <th>#</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>NXB</th>
+                            <th>Giá</th>
+                            <th>Số cuốn</th>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>Thủ thuật UX/UI</td>
-                            <td>Lead Team</td>
-                            <td>Tin học</td>
-                            <td>168.000</td>
-                            <td>2</td>
+                            <th>#</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>NXB</th>
+                            <th>Giá</th>
+                            <th>Số cuốn</th>
                         </tr>
                         <tr>
-                            <td>4</td>
-                            <td>Bàn có 5 chổ ngồi</td>
-                            <td>Nguyễn Nhật Ánh</td>
-                            <td>Trẻ</td>
-                            <td>208.000</td>
-                            <td>2</td>
+                            <th>#</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>NXB</th>
+                            <th>Giá</th>
+                            <th>Số cuốn</th>
                         </tr>
                         <tr>
-                            <td>5</td>
-                            <td>Kỹ năng sống cần có</td>
-                            <td>Wild lifer</td>
-                            <td>Wild</td>
-                            <td>325.000</td>
-                            <td>2</td>
+                            <th>#</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>NXB</th>
+                            <th>Giá</th>
+                            <th>Số cuốn</th>
+                        </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>NXB</th>
+                            <th>Giá</th>
+                            <th>Số cuốn</th>
+                        </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>NXB</th>
+                            <th>Giá</th>
+                            <th>Số cuốn</th>
+                        </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>NXB</th>
+                            <th>Giá</th>
+                            <th>Số cuốn</th>
+                        </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>NXB</th>
+                            <th>Giá</th>
+                            <th>Số cuốn</th>
+                        </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>NXB</th>
+                            <th>Giá</th>
+                            <th>Số cuốn</th>
+                        </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>NXB</th>
+                            <th>Giá</th>
+                            <th>Số cuốn</th>
                         </tr>
                         </tbody>
                     </table>
-                    <nav style="float: right    ">
-                        <ul class="pagination">
-                            <li class="page-item disabled"><span class="page-link">Trước</span></li>
-                            <li class="page-item"><a class="page-link"> 1</a></li>
-                            <li class="page-item"><a class="page-link">2</a></li>
-                            <li class="page-item"><a class="page-link">3</a></li>
-                            <li class="page-item"><a class="page-link">Sau</a></li>
-                        </ul>
-                    </nav>
                 </div>
                 <div style="width: 100%;height:80px;background: #45526e">
                     <h4 style="color: white;margin-top: 25px;margin-left: 20px"><b>Thông tin chi tiết</b></h4>
@@ -242,48 +288,6 @@ Với câu khẩu hiệu là, "viết một lần, chạy mọi nơi", cũng kh�
                                     <th>Tình trạng</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Nhựt Nguyễn</td>
-                                    <td>Thái Nguyễn</td>
-                                    <td>02/04/2018</td>
-                                    <td>07/04/2018</td>
-                                    <td>Đã trả</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Thái Nguyễn</td>
-                                    <td>Hải Đăng</td>
-                                    <td>15/12/2017</td>
-                                    <td>20/12/2017</td>
-                                    <td>Đã trả</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Hải Đăng</td>
-                                    <td>Nhựt Nguyễn</td>
-                                    <td>04/04/2018</td>
-                                    <td>14/04/2018</td>
-                                    <td>Hết hạn mượn</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Bảo Phạm</td>
-                                    <td>Hải Đăng</td>
-                                    <td>02/07/2017</td>
-                                    <td>07/07/2017</td>
-                                    <td>Đã trả</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Minh Nguyễn</td>
-                                    <td>Bảo Phạm</td>
-                                    <td>10/04/2018</td>
-                                    <td>17/04/2018</td>
-                                    <td>Đang mượn</td>
-                                </tr>
-                                </tbody>
                             </table>
                             <nav style="float: right    ">
                                 <ul class="pagination">

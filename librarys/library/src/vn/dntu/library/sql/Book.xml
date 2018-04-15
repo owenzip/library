@@ -10,7 +10,26 @@
 <mapper namespace="vn.dntu.library.service.BookService">
 
     <resultMap id="BookVO" type="BookVO">
-
+        <result property="idSach" column="idsach"/>
+        <result property="tenSach" column="tensach"/>
+        <result property="giaNhap" column="gianhap"/>
+        <result property="tenTacGia" column="tentacgia"/>
+        <result property="tenNhaXuatBan" column="tennhaxuatban"/>
+        <result property="soLuong" column="soluong"/>
     </resultMap>
+
+    <select id="selectBookTable" resultMap="BookVO">
+        SELECT
+        sa.idsach,
+        sa.tensach,
+        sa.gianhap,
+        tg.tentacgia,
+        xb.tennhaxuatban,
+        COUNT(sa.tensach) AS soluong
+        FROM sach sa
+        LEFT JOIN dmtacgia tg ON sa.idtacgia = tg.idtacgia
+        LEFT JOIN dmnhaxuatban xb ON sa.idnhaxuatban = xb.idnhaxuatban
+        GROUP BY sa.tensach
+    </select>
 </mapper>
 

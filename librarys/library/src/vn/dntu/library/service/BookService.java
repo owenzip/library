@@ -7,5 +7,11 @@
  */
 package vn.dntu.library.service;
 
+import vn.dntu.library.model.BookVO;
+
+import java.util.List;
+
+
 public interface BookService {
+    List<BookVO> selectBookTable();
 }
