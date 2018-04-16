@@ -13,8 +13,8 @@ import vn.dntu.library.model.BookVO;
 
 import java.util.List;
 
-
 public interface BookService {
+
     List<BookVO> selectBookTable();
 
     List<BookVO> selectListBookKind();
@@ -32,4 +32,8 @@ public interface BookService {
     List<BookVO> selectListBookAuthor();
 
     List<BookVO> selectBookInfo(@Param("idSach") int idSach);
+
+    void insertBookInfo(BookVO bookVO);
+
+    void deleteBookInfo(int idSach);
 }

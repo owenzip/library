@@ -6,6 +6,7 @@
  - @version 1.0
  - @since 15/04/2018
  -->
+
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="vn.dntu.library.service.BookService">
 
@@ -99,6 +100,7 @@
 
     <select id="selectBookInfo" resultMap="BookVO">
         SELECT
+        sa.idsach,
         sa.tensach,
         sa.idtacgia,
         sa.idtheloai,
@@ -116,5 +118,42 @@
         WHERE sa.idsach = #{idSach}
     </select>
 
+    <insert id="insertBookInfo" parameterType="BookVO">
+        INSERT INTO sach (
+        tensach,
+        idtheloai,
+        idnhaxuatban,
+        idtacgia,
+        trang,
+        gianhap,
+        idtinhtrang,
+        idbinhchon,
+        idnhacungcap,
+        ngaynhap,
+        ngayxuatban,
+        mota,
+        idchatluong
+        ) values (
+        #{tenSach},
+        #{idTheLoai},
+        #{idNhaXuatBan},
+        #{idTacGia},
+        #{trang},
+        #{giaNhap},
+        #{idTinhTrang},
+        #{idBinhChon},
+        #{idNhaCungCap},
+        #{ngayNhap},
+        #{ngayXuatBan},
+        #{moTa},
+        #{idChatLuong}
+        )
+    </insert>
+
+    <delete id="deleteBookInfo">
+        DELETE
+        FROM sach
+        WHERE idsach = #{idSach}
+    </delete>
 </mapper>
 

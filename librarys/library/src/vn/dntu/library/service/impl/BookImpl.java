@@ -110,4 +110,14 @@ public class BookImpl implements BookService {
             return null;
         }
     }
+
+    @Override
+    public void insertBookInfo(BookVO bookVO) {
+        bookService.insertBookInfo(bookVO);
+    }
+
+    @Override
+    public void deleteBookInfo(int idSach) {
+        bookService.deleteBookInfo(idSach);
+    }
 }

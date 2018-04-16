@@ -160,7 +160,7 @@ $(function () {
                                 type: 'dark',
                                 typeAnimated: true,
                                 buttons: {
-                                    tryAgain: {
+                                    confirm: {
                                         text: 'Xác nhận',
                                         btnClass: 'btn-mdb-color',
                                         action: function () {
@@ -172,11 +172,11 @@ $(function () {
                         } else {
                             $.confirm({
                                 title: 'Gửi liên hệ thất bại',
-                                content: 'Đã có lỗi xảy ra từ hệ thống, xin bạn vui lòng chờ hoặc liên hệ đến đường dây nóng 0999006990',
+                                content: 'Đã có lỗi xảy ra từ hệ thống, xin vui lòng thử lại hoặc liên hệ đến ban quản trị',
                                 type: 'dark',
                                 typeAnimated: true,
                                 buttons: {
-                                    tryAgain: {
+                                    confirm: {
                                         text: 'Xác nhận',
                                         btnClass: 'btn-mdb-color',
                                     },

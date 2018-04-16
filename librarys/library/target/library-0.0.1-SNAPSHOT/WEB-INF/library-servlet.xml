@@ -44,7 +44,7 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="typeAliasesPackage" value="vn.dntu.library.model"/>
-        <property name="mapperLocations" value="classpath*:vn/dntu/library/sql/*.xml"/>
+        <property name="mapperLocations" value="classpath*:vn/dntu/library/sql/**/*.xml"/>
     </bean>
 
     <!--Add @Session template Mybatis-->
@@ -54,7 +54,7 @@
 
     <!--Config Mybatis mapping file @Query-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="vn.dntu.library.sql"/>
+        <property name="basePackage" value="vn.dntu.library."/>
     </bean>
 </beans>
 

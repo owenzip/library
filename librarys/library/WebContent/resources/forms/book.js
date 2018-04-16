@@ -16,8 +16,13 @@ $(function () {
     let URL_SELECT_BOOK_VOTED = "/selectListBookVoted.do";
     let URL_SELECT_BOOK_AUTHOR = "/selectListBookAuthor.do";
     let URL_SELECT_BOOK_INFO = "/selectBookInfo.do";
-    let bookTable = $('#tblBook');
+    let URL_INSERT_BOOK_INFO = "/insertBookInfo.do";
+    let URL_DELETE_BOOK_INFO = "/deleteBookInfo.do";
+
     let configBookTableData = undefined;
+    let bookTable = $('#tblBook');
+    let formBookInfo = $('#formBookInfo');
+
     let setup = function () {
         configBookTableData = configBookTable;
         selectListBookKind();
@@ -28,6 +33,8 @@ $(function () {
         selectListBookVoted();
         selectListBookAuthor();
         selectBookInfo();
+        insertBookInfo();
+        deleteBookInfo();
     }
 
     let textDataTable = {
@@ -64,6 +71,7 @@ $(function () {
         "ordering": false,
         "serverSide": true,
         "processing": true,
+        "select": true,
         "ajax": {
             "url": URL_SELECT_BOOK_TABLE,
             "dataSrc": "",
@@ -105,7 +113,6 @@ $(function () {
             },
         ],
     });
-
 
     let selectListBookKind = function () {
         $.ajax({
@@ -207,8 +214,8 @@ $(function () {
 
     let selectBookInfo = function () {
         bookTable.find('tbody').on('click', 'tr', function () {
-            let data = configBookTableData.row(this).data();
-            let idSach = data.idSach;
+            let dataTable = configBookTableData.row(this).data();
+            let idSach = dataTable.idSach;
             if ($(this).hasClass('selected')) {
                 $(this).removeClass('selected');
             } else {
@@ -224,10 +231,11 @@ $(function () {
                         $.each(data[0], function (key, val) {
                             $('#' + key).val(val);
                         })
+                        $('#soLuong').val(dataTable.soLuong);
                     } else {
                         $.confirm({
-                            title: 'Đã có lỗi xảy ra trong quá trình tải dữ liệu',
-                            content: '',
+                            title: 'Tải dữ liệu thất bại',
+                            content: 'Đã có lỗi xảy ra trong quá trình tải dữ liệu',
                             type: 'dark',
                             typeAnimated: true,
                             buttons: {
@@ -241,6 +249,128 @@ $(function () {
                 }
             })
         });
+    }
+
+    let insertBookInfo = function () {
+        $('#btnAddBook').on('click', function () {
+            $.ajax({
+                type: "POST",
+                url: URL_INSERT_BOOK_INFO,
+                data: formBookInfo.serialize(),
+                success: function (data) {
+                    if (data) {
+                        configBookTableData.ajax.reload();
+                        formBookInfo.find('input[type=text], textarea').val("");
+                        formBookInfo.find('select').val(-1);
+                        $.confirm({
+                            title: 'Thêm sách thành công',
+                            content: '',
+                            type: 'dark',
+                            typeAnimated: true,
+                            buttons: {
+                                confirm: {
+                                    text: 'Đồng ý',
+                                    btnClass: 'btn-mdb-color',
+                                },
+                            }
+                        });
+                    } else {
+                        $.confirm({
+                            title: 'Thêm sách thất bại',
+                            content: 'Đã có lỗi xảy ra trong quá trình thêm sách, vui lòng kiểm tra lại các trường bạn đã nhập',
+                            type: 'dark',
+                            typeAnimated: true,
+                            buttons: {
+                                confirm: {
+                                    text: 'Xác nhận',
+                                    btnClass: 'btn-mdb-color',
+                                },
+                            }
+                        });
+                    }
+                }
+            });
+        })
+    };
+
+    let deleteBookInfo = function () {
+        $('#btnDeleteBook').on('click', function () {
+            let idSach = $('#idSach').val();
+            if (idSach == -1) {
+                $.confirm({
+                    title: 'Bạn chưa chọn sách cần xóa',
+                    content: '',
+                    type: 'dark',
+                    typeAnimated: true,
+                    buttons: {
+                        confirm: {
+                            text: 'Xóa',
+                            btnClass: 'btn-mdb-color',
+                        },
+                    }
+                });
+            } else {
+                $.confirm({
+                    title: 'Bạn có chắc chắn muốn xóa',
+                    content: '',
+                    type: 'dark',
+                    typeAnimated: true,
+                    buttons: {
+                        confirm: {
+                            text: 'Xóa',
+                            btnClass: 'btn-mdb-color',
+                            action: function () {
+                                callBack();
+                            }
+                        },
+                        cancel: {
+                            text: 'Hủy',
+                            btnClass: 'btn-mdb-color',
+                        },
+                    }
+                });
+            }
+            let callBack = function () {
+                $.ajax({
+                    url: URL_DELETE_BOOK_INFO,
+                    type: "POST",
+                    data: {'idSach': idSach},
+                    success: function (data) {
+                        if (data) {
+                            configBookTableData.ajax.reload();
+                            formBookInfo.find('input[type=text], textarea').val("");
+                            formBookInfo.find('input[type=hidden]').val("-1");
+                            formBookInfo.find('select').val(-1);
+                            $.confirm({
+                                title: 'Xóa sách thành công',
+                                content: '',
+                                type: 'dark',
+                                typeAnimated: true,
+                                buttons: {
+                                    confirm: {
+                                        text: 'Đồng ý',
+                                        btnClass: 'btn-mdb-color',
+                                    },
+                                }
+                            });
+                        } else {
+                            $.confirm({
+                                title: 'Xóa sách thất bại',
+                                content: 'Đã có lỗi xảy ra từ hệ thống, vui lòng thử lại hoặc liên hệ đến ban quản trị',
+                                type: 'dark',
+                                typeAnimated: true,
+                                buttons: {
+                                    confirm: {
+                                        text: 'Xác nhận',
+                                        btnClass: 'btn-mdb-color',
+                                    },
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        })
     }
 
     return setup();
