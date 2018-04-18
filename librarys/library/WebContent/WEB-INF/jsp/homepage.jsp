@@ -42,7 +42,7 @@
                             </select>
                         </div>
                         <div class="col-md-4" style="margin-top: 10px">
-                            <input type="text" class="form-control" placeholder="Nhập tên sách...">
+                            <input id="searchTenSach" type="text" class="form-control" placeholder="Nhập tên sách..." value="">
                         </div>
                         <div class="col-md-2">
                             <a id="btnSearch" class="btn btn-mdb-color">&nbsp&nbspXem&nbsp&nbsp</a>
@@ -58,7 +58,7 @@
                             <th>Tác giả</th>
                             <th>NXB</th>
                             <th>Giá</th>
-                            <th>Số cuốn</th>
+                            <th>SL</th>
                         </tr>
                         </thead>
                     </table>
@@ -142,7 +142,7 @@
                             </div>
                             <div class="col-md-3">
                                 <label>Số lượng</label>
-                                <input id="soLuong" name="soLuong" type="text" class="form-control">
+                                <input id="soLuong" name="soLuong" type="text" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="col-md-12 form-row" style="margin-top: 30px">
@@ -153,13 +153,11 @@
                         </div>
                     </div>
                 </form>
-                <div class="col-md-12 form-row" style="margin-top: 40px;padding-bottom: 30px">
-                    <div class="col-md-3"></div>
-                    <div class="btn-group text-center" style="margin-left: 50px">
+                <div class="col-md-12 form-row">
+                    <div class="btn-group" style="padding-bottom: 30px;margin: 0 auto;">
                         <a id="btnAddBook" class="btn btn-mdb-color">Thêm</a>
                         <a id="btnDeleteBook" class="btn btn-mdb-color">Xóa</a>
-                        <a class="btn btn-mdb-color">Sửa</a>
-                        <a class="btn btn-mdb-color">Lưu</a>
+                        <a id="btnUpdateBook" class="btn btn-mdb-color">Sửa</a>
                     </div>
                 </div>
                 <%--XEM LỊCH SỬ--%>

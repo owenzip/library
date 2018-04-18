@@ -15,7 +15,7 @@ import java.util.List;
 
 public interface BookService {
 
-    List<BookVO> selectBookTable();
+    List<BookVO> selectBookTable(@Param("searchTenSach") String searchTenSach);
 
     List<BookVO> selectListBookKind();
 
@@ -36,4 +36,7 @@ public interface BookService {
     void insertBookInfo(BookVO bookVO);
 
     void deleteBookInfo(int idSach);
+
+    void updateBookInfo(BookVO bookVO);
+
 }

@@ -1,5 +1,7 @@
 Html, body{
-     height:100%;
+    height:100%;
+    max-width: 100%;
+    overflow-x: hidden;
  }
 .grandParentContaniner{
     display:table;
@@ -10,3 +12,7 @@ Html, body{
     display:table-cell;
     vertical-align:middle;
 }
+table {
+    border-style: none;
+}
+

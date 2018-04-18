@@ -20,7 +20,7 @@ $(function () {
 
     /* @Function: Xử lý các nghiệp vụ đăng nhập */
     let checkLogin = function () {
-        $('#btnXacNhan').on('click', function () {
+        $('#btnConfirm').on('click', function () {
             let tenDangNhap = $('#tenDangNhap').val();
             let matKhau = $('#matKhau').val();
             if (tenDangNhap.length < 3) {
@@ -78,11 +78,11 @@ $(function () {
                 });
             }
         })
-    }
+    };
 
     /* @Function: Xử lý nghiệp vụ lấy danh sách ban quản trị & vấn đề */
     let selectListAdminAndProblem = function () {
-        $('#btnLienHe').on('click', function () {
+        $('#btnContact').on('click', function () {
             $.ajax({
                 url: URL_SELECT_LIST_ADMIN,
                 type: "POST",
@@ -187,7 +187,7 @@ $(function () {
                 });
             }
         })
-    }
+    };
 
     return setup();
 });

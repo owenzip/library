@@ -27,9 +27,9 @@ public class BookController {
 
     @RequestMapping(value = "/selectBookTable.do")
     @ResponseBody
-    public List<BookVO> selectBookTable() {
+    public List<BookVO> selectBookTable(@RequestParam("searchTenSach") String searchTenSach) {
         try {
-            List<BookVO> bookVO = bookImpl.selectBookTable();
+            List<BookVO> bookVO = bookImpl.selectBookTable(searchTenSach);
             return bookVO;
         } catch (Exception e) {
             e.printStackTrace();
@@ -147,13 +147,25 @@ public class BookController {
 
     @RequestMapping(value = "/deleteBookInfo.do")
     @ResponseBody
-    public String deleteBookInfo(@RequestParam("idSach") int idSach) {
+    public boolean deleteBookInfo(@RequestParam("idSach") int idSach) {
         try {
             this.bookImpl.deleteBookInfo(idSach);
-            return "s";
+            return true;
         } catch (Exception e) {
             e.printStackTrace();
-            return "";
+            return false;
+        }
+    }
+
+    @RequestMapping(value = "/updateBookInfo.do")
+    @ResponseBody
+    public boolean updateBookInfo(@ModelAttribute final BookVO bookVO) {
+        try {
+            bookImpl.updateBookInfo(bookVO);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }

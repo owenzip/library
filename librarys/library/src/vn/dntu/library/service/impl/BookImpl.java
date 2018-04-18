@@ -22,9 +22,9 @@ public class BookImpl implements BookService {
     BookService bookService;
 
     @Override
-    public List<BookVO> selectBookTable() {
+    public List<BookVO> selectBookTable(String searchTenSach) {
         try {
-            return bookService.selectBookTable();
+            return bookService.selectBookTable(searchTenSach);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -113,11 +113,28 @@ public class BookImpl implements BookService {
 
     @Override
     public void insertBookInfo(BookVO bookVO) {
-        bookService.insertBookInfo(bookVO);
+        try {
+            bookService.insertBookInfo(bookVO);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void deleteBookInfo(int idSach) {
-        bookService.deleteBookInfo(idSach);
+        try {
+            bookService.deleteBookInfo(idSach);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void updateBookInfo(BookVO bookVO) {
+        try {
+            bookService.updateBookInfo(bookVO);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

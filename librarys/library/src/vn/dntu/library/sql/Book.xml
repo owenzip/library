@@ -33,6 +33,7 @@
         <result property="ngayNhap" column="ngaynhap"/>
         <result property="trang" column="trang"/>
         <result property="moTa" column="mota"/>
+        <result property="searchTenSach" column="searchTenSach"/>
     </resultMap>
 
     <select id="selectBookTable" resultMap="BookVO">
@@ -46,6 +47,7 @@
         FROM sach sa
         LEFT JOIN dmtacgia tg ON sa.idtacgia = tg.idtacgia
         LEFT JOIN dmnhaxuatban xb ON sa.idnhaxuatban = xb.idnhaxuatban
+        WHERE sa.tensach LIKE '%'||#{searchTenSach}||'%'
         GROUP BY sa.tensach
     </select>
 
@@ -155,5 +157,24 @@
         FROM sach
         WHERE idsach = #{idSach}
     </delete>
+
+    <update id="updateBookInfo" parameterType="BookVO">
+        UPDATE sach
+        SET
+        tensach = #{tenSach},
+        idtheloai = #{idTheLoai},
+        idnhaxuatban = #{idNhaXuatBan},
+        idtacgia = #{idTacGia},
+        trang = #{trang},
+        gianhap = #{giaNhap},
+        idtinhtrang = #{idTinhTrang},
+        idbinhchon = #{idBinhChon},
+        idnhacungcap = #{idNhaCungCap},
+        ngaynhap = #{ngayNhap},
+        ngayxuatban = #{ngayXuatBan},
+        mota = #{moTa},
+        idchatluong = #{idChatLuong}
+        WHERE idsach = #{idSach}
+    </update>
 </mapper>
 

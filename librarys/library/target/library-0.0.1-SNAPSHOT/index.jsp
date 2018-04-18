@@ -32,10 +32,10 @@
                     <label>Mật khẩu</label>
                     <input id="matKhau" name="matKhau" type="password" class="form-control" placeholder="Nhập mật khẩu" value="admin">
                     <div class="text-center" style="margin-top: 20px">
-                        <a id="btnXacNhan" class="btn btn-mdb-color">XÁC NHẬN</a>
+                        <a id="btnConfirm" class="btn btn-mdb-color">XÁC NHẬN</a>
                     </div>
                     <div class="text-center">
-                        <a id="btnLienHe" href="<c:url value='/homepage.do'/>" class="btn btn-link" data-toggle="modal" data-target="#contactModal">LIÊN HỆ VỚI QUẢN TRỊ</a>
+                        <a id="btnContact" href="<c:url value='/homepage.do'/>" class="btn btn-link" data-toggle="modal" data-target="#contactModal">LIÊN HỆ VỚI QUẢN TRỊ</a>
                     </div>
                 </form>
             </div>

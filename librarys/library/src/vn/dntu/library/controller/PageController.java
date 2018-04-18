@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class PageController {
 
+    @RequestMapping(value = "/",method = RequestMethod.GET)
+    public String dangNhap() { return "index"; }
+
     @RequestMapping(value = "/homepage.do",method = RequestMethod.GET)
     public String homePage() { return "homepage"; }
 

@@ -15063,7 +15063,7 @@ $(window).scroll(function () {
             body.addEventListener('touchend', TouchHandler.registerEvent, false);
         }
 
-        body.addEventListener('mousedown', showEffect, false);
+        //body.addEventListener('mousedown', showEffect, false);
     };
 
 

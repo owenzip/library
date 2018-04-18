@@ -34,6 +34,15 @@ public class BookVO {
     private String ngayXuatBan;
     private String ngayNhap;
     private String moTa;
+    private String searchTenSach;
+
+    public String getSearchTenSach() {
+        return searchTenSach;
+    }
+
+    public void setSearchTenSach(String searchTenSach) {
+        this.searchTenSach = searchTenSach;
+    }
 
     public String getMoTa() {
         return moTa;

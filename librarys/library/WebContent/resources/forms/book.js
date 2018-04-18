@@ -18,7 +18,7 @@ $(function () {
     let URL_SELECT_BOOK_INFO = "/selectBookInfo.do";
     let URL_INSERT_BOOK_INFO = "/insertBookInfo.do";
     let URL_DELETE_BOOK_INFO = "/deleteBookInfo.do";
-
+    let URL_UPDATE_BOOK_INFO = "/updateBookInfo.do";
     let configBookTableData = undefined;
     let bookTable = $('#tblBook');
     let formBookInfo = $('#formBookInfo');
@@ -35,54 +35,48 @@ $(function () {
         selectBookInfo();
         insertBookInfo();
         deleteBookInfo();
+        updateBookInfo();
+        searchBookInfo();
     }
 
+    /*@Config notification DataTable*/
     let textDataTable = {
-        "decimal": "",
         "emptyTable": "Không tìm thấy dữ liệu",
-        "infoPostFix": "",
         "thousands": ",",
-        "lengthMenu": "Xem  &nbsp;_MENU_&nbsp; dòng/trang",
-        "loadingRecords": "Đang tải...",
-        "processing": "Đang xử lý...",
-        "search": "Search:",
-        "zeroRecords": "Không tìm thấy dữ liệu",
-        "paginate": {
-            "first": "Đầu",
-            "last": "Cuối",
-            "next": "Sau",
-            "previous": "Trước"
-        },
-        "aria": {
-            "sortAscending": ": sắp xếp tăng dần",
-            "sortDescending": ": sắp xếp giảm dần"
-        }
+        "loadingRecords": "Đang tải dữ liệu...",
+        "processing": "Đang tải dữ liệu...",
+        "zeroRecords": "Không có dữ liệu",
     };
 
-    let configBookTable = bookTable.DataTable({
+    /*@Config default DataTable*/
+    $.extend($.fn.dataTable.defaults, {
         "language": textDataTable,
-        "searching": false,
-        "paging": false,
-        "showLines": false,
-        "scrollY": 400,
-        "scrollX": false,
-        "info": false,
-        "scrollCollapse": true,
+        "searching": false, // Tìm kiếm
+        "paging": false, // Phân trang
+        "scrollY": 300, // Cuộn dọc
+        "info": false, // Thông tin bảng
         "ordering": false,
         "serverSide": true,
         "processing": true,
         "select": true,
+    });
+
+    let configBookTable = bookTable.DataTable({
         "ajax": {
             "url": URL_SELECT_BOOK_TABLE,
+            "data": function (data) {
+                data.searchTenSach = $('#searchTenSach').val();
+            },
             "dataSrc": "",
         },
         "columnDefs": [
             {
-                "targets": "_all",
-                class: "text-center font-weight-normal",
-            }, {
+                "targets": [0, 4, 5],
+                class: "text-center"
+            },
+            {
                 "targets": 0,
-                "sWidth": "10%",
+                "sWidth": "5%",
                 render: function (data, type, row, meta) {
                     let rowIndex = parseInt(meta.row);
                     let startAt = parseInt(meta.settings._iDisplayStart);
@@ -99,7 +93,7 @@ $(function () {
 
             }, {
                 "targets": 3,
-                "sWidth": "15%",
+                "sWidth": "25%",
                 "data": "tenNhaXuatBan",
             }, {
                 "targets": 4,
@@ -108,7 +102,7 @@ $(function () {
 
             }, {
                 "targets": 5,
-                "sWidth": "15%",
+                "sWidth": "10%",
                 "data": "soLuong"
             },
         ],
@@ -126,7 +120,7 @@ $(function () {
                 }
             }
         });
-    }
+    };
 
     let selectListBookProducer = function () {
         $.ajax({
@@ -140,7 +134,7 @@ $(function () {
                 }
             }
         });
-    }
+    };
 
     let selectListBookSupplier = function () {
         $.ajax({
@@ -154,7 +148,7 @@ $(function () {
                 }
             }
         });
-    }
+    };
 
     let selectListBookQuality = function () {
         $.ajax({
@@ -168,7 +162,7 @@ $(function () {
                 }
             }
         });
-    }
+    };
 
     let selectListBookStatus = function () {
         $.ajax({
@@ -182,7 +176,7 @@ $(function () {
                 }
             }
         });
-    }
+    };
 
     let selectListBookVoted = function () {
         $.ajax({
@@ -196,7 +190,7 @@ $(function () {
                 }
             }
         });
-    }
+    };
 
     let selectListBookAuthor = function () {
         $.ajax({
@@ -210,7 +204,7 @@ $(function () {
                 }
             }
         });
-    }
+    };
 
     let selectBookInfo = function () {
         bookTable.find('tbody').on('click', 'tr', function () {
@@ -218,38 +212,39 @@ $(function () {
             let idSach = dataTable.idSach;
             if ($(this).hasClass('selected')) {
                 $(this).removeClass('selected');
+                clearData();
             } else {
                 configBookTableData.$('tr.selected').removeClass('selected');
                 $(this).addClass('selected');
-            }
-            $.ajax({
-                url: URL_SELECT_BOOK_INFO,
-                type: "POST",
-                data: {"idSach": idSach},
-                success: function (data) {
-                    if (data) {
-                        $.each(data[0], function (key, val) {
-                            $('#' + key).val(val);
-                        })
-                        $('#soLuong').val(dataTable.soLuong);
-                    } else {
-                        $.confirm({
-                            title: 'Tải dữ liệu thất bại',
-                            content: 'Đã có lỗi xảy ra trong quá trình tải dữ liệu',
-                            type: 'dark',
-                            typeAnimated: true,
-                            buttons: {
-                                tryAgain: {
-                                    text: 'Thử lại',
-                                    btnClass: 'btn-mdb-color',
-                                },
-                            }
-                        });
+                $.ajax({
+                    url: URL_SELECT_BOOK_INFO,
+                    type: "POST",
+                    data: {"idSach": idSach},
+                    success: function (data) {
+                        if (data) {
+                            $.each(data[0], function (key, val) {
+                                $('#' + key).val(val);
+                            })
+                            $('#soLuong').val(dataTable.soLuong);
+                        } else {
+                            $.confirm({
+                                title: 'Tải dữ liệu thất bại',
+                                content: 'Đã có lỗi xảy ra trong quá trình tải dữ liệu',
+                                type: 'dark',
+                                typeAnimated: true,
+                                buttons: {
+                                    tryAgain: {
+                                        text: 'Thử lại',
+                                        btnClass: 'btn-mdb-color',
+                                    },
+                                }
+                            });
+                        }
                     }
-                }
-            })
+                })
+            }
         });
-    }
+    };
 
     let insertBookInfo = function () {
         $('#btnAddBook').on('click', function () {
@@ -260,8 +255,7 @@ $(function () {
                 success: function (data) {
                     if (data) {
                         configBookTableData.ajax.reload();
-                        formBookInfo.find('input[type=text], textarea').val("");
-                        formBookInfo.find('select').val(-1);
+                        clearData();
                         $.confirm({
                             title: 'Thêm sách thành công',
                             content: '',
@@ -274,21 +268,23 @@ $(function () {
                                 },
                             }
                         });
-                    } else {
-                        $.confirm({
-                            title: 'Thêm sách thất bại',
-                            content: 'Đã có lỗi xảy ra trong quá trình thêm sách, vui lòng kiểm tra lại các trường bạn đã nhập',
-                            type: 'dark',
-                            typeAnimated: true,
-                            buttons: {
-                                confirm: {
-                                    text: 'Xác nhận',
-                                    btnClass: 'btn-mdb-color',
-                                },
-                            }
-                        });
                     }
+                },
+                error: function () {
+                    $.confirm({
+                        title: 'Thêm sách thất bại',
+                        content: 'Đã có lỗi xảy ra trong quá trình thêm sách, vui lòng kiểm tra lại các trường bạn đã nhập',
+                        type: 'dark',
+                        typeAnimated: true,
+                        buttons: {
+                            confirm: {
+                                text: 'Xác nhận',
+                                btnClass: 'btn-mdb-color',
+                            },
+                        }
+                    });
                 }
+
             });
         })
     };
@@ -304,7 +300,7 @@ $(function () {
                     typeAnimated: true,
                     buttons: {
                         confirm: {
-                            text: 'Xóa',
+                            text: 'Thử lại',
                             btnClass: 'btn-mdb-color',
                         },
                     }
@@ -338,9 +334,7 @@ $(function () {
                     success: function (data) {
                         if (data) {
                             configBookTableData.ajax.reload();
-                            formBookInfo.find('input[type=text], textarea').val("");
-                            formBookInfo.find('input[type=hidden]').val("-1");
-                            formBookInfo.find('select').val(-1);
+                            clearData();
                             $.confirm({
                                 title: 'Xóa sách thành công',
                                 content: '',
@@ -370,6 +364,96 @@ $(function () {
                     }
                 });
             }
+        })
+    };
+
+    let updateBookInfo = function () {
+        $('#btnUpdateBook').on('click', function () {
+            let idSach = $('#idSach').val();
+            if (idSach == -1) {
+                $.confirm({
+                    title: 'Bạn chưa chọn sách cần sửa',
+                    content: '',
+                    type: 'dark',
+                    typeAnimated: true,
+                    buttons: {
+                        confirm: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-mdb-color',
+                        },
+                    }
+                });
+            } else {
+                $.confirm({
+                    title: 'Bạn có chắc chắn muốn sửa sách này',
+                    content: '',
+                    type: 'dark',
+                    typeAnimated: true,
+                    buttons: {
+                        confirm: {
+                            text: 'Sửa',
+                            btnClass: 'btn-mdb-color',
+                            action: function () {
+                                callBack();
+                            }
+                        },
+                        cancel: {
+                            text: 'Hủy',
+                            btnClass: 'btn-mdb-color',
+                        },
+                    }
+                });
+            }
+            let callBack = function () {
+                $.ajax({
+                    url: URL_UPDATE_BOOK_INFO,
+                    type: "POST",
+                    data: formBookInfo.serialize(),
+                    success: function (data) {
+                        if (data) {
+                            configBookTableData.ajax.reload();
+                            clearData();
+                            $.confirm({
+                                title: 'Sửa sách thành công',
+                                content: '',
+                                type: 'dark',
+                                typeAnimated: true,
+                                buttons: {
+                                    confirm: {
+                                        text: 'Đồng ý',
+                                        btnClass: 'btn-mdb-color',
+                                    },
+                                }
+                            });
+                        } else {
+                            $.confirm({
+                                title: 'Sửa sách thất bại',
+                                content: 'Đã có lỗi xảy ra từ hệ thống, vui lòng thử lại hoặc liên hệ đến ban quản trị',
+                                type: 'dark',
+                                typeAnimated: true,
+                                buttons: {
+                                    confirm: {
+                                        text: 'Xác nhận',
+                                        btnClass: 'btn-mdb-color',
+                                    },
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        })
+    };
+
+    let clearData = function () {
+        formBookInfo.find('input[type=text], textarea').val("");
+        formBookInfo.find('input[type=hidden]').val("-1");
+        formBookInfo.find('select').val(-1);
+    };
+
+    let searchBookInfo = function () {
+        $('#btnSearch').on('click',function () {
+            configBookTable.ajax.reload();
         })
     }
 

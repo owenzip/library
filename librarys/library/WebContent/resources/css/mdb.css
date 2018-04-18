@@ -6377,15 +6377,17 @@ footer.page-footer {
     transition: 0.5s; }
 
 table th {
-  font-size: 0.9rem;
-  font-weight: 400; }
+  font-size: 1rem;
+  font-weight: 400;
+}
 
 table td {
-  font-size: 0.9rem;
-  font-weight: 300; }
+  font-size: 15px;
+  font-weight: 400; }
 
 table.table thead th {
-  border-top: none; }
+    border:none;
+}
 
 table.table th,
 table.table td {
