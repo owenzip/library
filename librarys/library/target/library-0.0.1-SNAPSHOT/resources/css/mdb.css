@@ -4234,7 +4234,7 @@ a.waves-effect, a.waves-light {
   animation-name: slideOutUp; }
 
 .btn {
-  padding: 0.84rem 2.14rem;
+  padding: 10px 21px;
   font-size: 0.81rem;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -5454,7 +5454,7 @@ a.waves-effect, a.waves-light {
     margin: 0 5px 1px 8px; }
   .navbar .breadcrumb {
     margin: 0;
-    padding: 0.3rem 0 0 1rem;
+    padding: 6px 295px 9px;
     background-color: inherit;
     font-size: 15px;
     font-weight: 300; }

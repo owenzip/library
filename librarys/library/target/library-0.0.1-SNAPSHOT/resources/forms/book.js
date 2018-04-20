@@ -71,7 +71,7 @@ $(function () {
         },
         "columnDefs": [
             {
-                "targets": [0, 4, 5],
+                "targets": "_all",
                 class: "text-center"
             },
             {
@@ -454,6 +454,7 @@ $(function () {
     let searchBookInfo = function () {
         $('#btnSearch').on('click',function () {
             configBookTable.ajax.reload();
+            configBookTable.draw();
         })
     }
 

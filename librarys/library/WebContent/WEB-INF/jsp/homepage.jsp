@@ -17,7 +17,7 @@
 </head>
 <body style="background: #f6f6f6">
 <jsp:include page="navbar.jsp"/>
-<div class="container" style="width: 90%">
+<div class="container">
     <div class="text-center" style="margin-top: 40px">
         <h2><b>QUẢN LÝ SÁCH</b></h2>
     </div>
@@ -63,8 +63,8 @@
                         </thead>
                     </table>
                 </div>
-                <div style="width: 100%;height:80px;background: #45526e">
-                    <h4 style="color: white;margin-top: 25px;margin-left: 20px"><b>Thông tin chi tiết</b></h4>
+                <div style="width: 100%;height:50px;background: #45526e">
+                    <h5 style="color: white;margin-top: 25px;margin-left: 20px"><b>Thông tin chi tiết</b></h5>
                 </div>
                 <form id="formBookInfo">
                     <div class="row form-group" style="margin-top: 50px;margin-left: 60px">

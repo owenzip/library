@@ -17,7 +17,7 @@
 </head>
 <body style="background: #f6f6f6">
 <jsp:include page="navbar.jsp"/>
-<div class="container" style="width: 90%">
+<div class="container">
     <div class="text-center" style="margin-top: 40px">
         <h2><b>THƯ VIỆN ONLINE</b></h2>
         <div class="row" style="margin-top: 30px">
